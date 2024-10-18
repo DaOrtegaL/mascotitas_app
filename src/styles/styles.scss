@@ -1,8 +1,8 @@
-@import './componentes/_font.scss';
+@import './componentes/font';
 @import './componentes/home_page';
 @import './componentes/global';
-@import './componentes/footer';
 @import './componentes/header';
+@import './componentes/productos';
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
