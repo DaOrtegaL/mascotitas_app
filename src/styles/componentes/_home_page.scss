@@ -1,8 +1,16 @@
 .home-page {
   &__carrusel {
+    margin: 30px;
+    border-radius: 15%;
+    .parrafo {
+      color: #ffe7da;
+      font-weight: 400;
+      font-size: large;
+    }
   }
 
   &__titulo {
+    padding: 20px;
     color: #f05a25;
     text-align: center;
   }
@@ -16,8 +24,31 @@
     padding: 10px;
 
     &--caja {
+      width: 416px;
+      height: 326px;
       border: 1px solid #ffe7da;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: space-evenly;
+
+      .icono {
+        width: 24px;
+        height: 25px;
+      }
+
+      .titulo {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .informacion {
+        border: 1px solid #ffe7da;
+        padding: 12px 20px 12px 20px;
+        width: fit-content;
+        border-radius: 8px;
+      }
     }
   }
 }
