@@ -43,7 +43,7 @@ const renderPagination = (data) => {
   }
 
   // Botón de "Siguiente"
-  const nextButton = `<button class="page-button next" ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage + 1}">Siguiente</button>`;
+  const nextButton = `<button class="productos__pagination--siguiente page-button next" ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage + 1}">Siguiente</button>`;
   paginationContainer.innerHTML += nextButton;
 
   // Añadir listeners a los botones de paginación, "Anterior" y "Siguiente"
