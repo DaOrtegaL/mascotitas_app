@@ -58,6 +58,7 @@ const renderPagination = (data) => {
 const fetchProducts = async (page = 1) => {
   try {
     const apiURL = import.meta.env.VITE_API_URL;
+    //Reemplazar apiURL en .env con la URL correcta
     console.log('URL', `${apiURL}/products?page=${page}&limit=12`);
     const response = await fetch(`${apiURL}/products?page=${page}&limit=12`);
     const data = await response.json();
