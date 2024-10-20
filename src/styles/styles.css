@@ -14,13 +14,20 @@
   font-weight: 700;
 }
 .home-page__carrusel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 30px;
-  border-radius: 15%;
 }
 .home-page__carrusel .parrafo {
   color: #ffe7da;
   font-weight: 400;
   font-size: large;
+}
+.home-page__carrusel .carousel button span {
+  width: 44px;
+  height: 84px;
 }
 .home-page__titulo {
   padding: 20px;
@@ -53,12 +60,16 @@
   font-size: 30px;
   font-weight: 600;
 }
+.home-page__contenedor--caja .parrafo {
+  color: black;
+}
 .home-page__contenedor--caja .informacion {
   border: 1px solid #ffe7da;
   padding: 12px 20px 12px 20px;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 8px;
+  box-shadow: 0px 2px 2px 0px rgba(16, 24, 40, 0.0509803922);
 }
 
 :root {
