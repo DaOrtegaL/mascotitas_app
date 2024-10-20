@@ -4,25 +4,26 @@ Este es un proyecto frontend desarrollado con **Vite**, usando **Vanilla JavaScr
 
 ## Estructura del Proyecto
 
-mascotitas_petshop/
-│
-├── dist/                   # Carpeta generada para los archivos compilados (Producción)
-├── node_modules/            # Dependencias instaladas por npm
-├── src/                     # Carpeta principal del proyecto
-│   ├── components/          # Archivos HTML de los componentes reutilizables
-│   │   └── footer.html      # Componente de footer como archivo HTML externo
-│   ├── js/                  # Archivos JavaScript
-│   │   ├── main.js          # Archivo principal JS
-│   │   └── my-component.js  # Definición de Web Components
-│   ├── styles/              # Archivos Sass
-│   │   └── styles.scss      # Archivo Sass principal
-│   └── assets/              # Archivos estáticos (imágenes, fuentes, etc.)
-├── .eslintrc.js             # Configuración de ESLint
-├── .prettierrc              # Configuración de Prettier
-├── index.html               # Página principal del proyecto
-├── vite.config.js           # Configuración de Vite
-├── package.json             # Configuración del proyecto y scripts npm
-└── README.md                # Información del proyecto
+    ```bash
+    mascotitas_petshop/
+    │
+    ├── dist/                   # Carpeta generada para los archivos compilados (Producción)
+    ├── node_modules/            # Dependencias instaladas por npm
+    ├── src/                     # Carpeta principal del proyecto
+    │   ├── components/          # Archivos HTML de los componentes reutilizables
+    │   │   └── footer.html      # Componente de footer como archivo HTML externo
+    │   ├── js/                  # Archivos JavaScript
+    │   │   ├── main.js          # Archivo principal JS
+    │   │   └── my-component.js  # Definición de Web Components
+    │   ├── styles/              # Archivos Sass
+    │   │   └── styles.scss      # Archivo Sass principal
+    │   └── assets/              # Archivos estáticos (imágenes, fuentes, etc.)
+    ├── .eslintrc.js             # Configuración de ESLint
+    ├── .prettierrc              # Configuración de Prettier
+    ├── index.html               # Página principal del proyecto
+    ├── vite.config.js           # Configuración de Vite
+    ├── package.json             # Configuración del proyecto y scripts npm
+    └── README.md                # Información del proyecto
 
 Tecnologías Utilizadas
 - Vite: Bundler de frontend ligero y rápido.
@@ -44,24 +45,37 @@ En el archivo package.json, hay varios scripts disponibles que facilitan el desa
   "format": "prettier --write ."
 }
 
+##Explicación de los Scripts
+En el archivo package.json, tienes varios scripts útiles:
+
+npm run dev: Inicia el servidor de desarrollo.
+npm run build: Compila la aplicación para producción.
+npm run preview: Previsualiza la aplicación compilada.
+npm run lint: Ejecuta ESLint para revisar problemas de estilo y calidad de código.
+npm run lint:fix: Ejecuta ESLint y arregla automáticamente los errores posibles.
+npm run format: Ejecuta Prettier para formatear el código.
+
 ## Instalación y Configuración
 
 1. Clona el repositorio:
 
    ```bash
    git clone https://github.com/DaOrtegaL/mascotitas_app.git
-   cd mascotitas_petshop
+   cd mascotitas_app
 
 2. Instala las dependencias:
 
+    ```bash
     npm install
 
 3. Inicia el servidor de desarrollo:
 
+    ```bash
     npm run dev
 
 4. Compila el proyecto para producción:
 
+    ```bash
     npm run build
 
 
