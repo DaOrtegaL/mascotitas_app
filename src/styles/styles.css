@@ -497,6 +497,18 @@ p {
   color: var(--marron-tierra);
 }
 
+.finalizar-compra {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.finalizar-compra__productos-similares-contenedor {
+  width: 80%;
+}
+
 .carousel {
   position: relative;
 }
