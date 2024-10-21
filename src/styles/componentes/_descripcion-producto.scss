@@ -1,0 +1,111 @@
+.main {
+  position: relative;
+
+  &__detalle {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 112px;
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+    &__imagen {
+      width: 30%;
+      border: 1px solid var(--naranja-vivo);
+      border-radius: 8px;
+      img {
+        max-width: fill;
+        max-height: fixed;
+      }
+    }
+
+    &__descripcion {
+      width: 40%;
+      h2 {
+        color: var(--naranja-vivo);
+      }
+      span {
+        font-weight: bolder;
+      }
+      &--texto {
+        font-size: smaller;
+        margin-bottom: 5px;
+      }
+      &--botones {
+        display: flex;
+        flex-direction: row;
+        p {
+          width: 30px;
+          border: 1px solid var(--naranja-vivo);
+          text-align: center;
+        }
+        .mas {
+          color: var(--blanco);
+          background-color: var(--naranja-vivo);
+          border: 1px solid var(--naranja-vivo);
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--blanco);
+            color: var(--naranja-vivo);
+          }
+          &:active {
+            background-color: var(--naranja-vivo);
+            color: var(--blanco);
+          }
+        }
+        .menos {
+          color: var(--blanco);
+          background-color: var(--naranja-vivo);
+          border: 1px solid var(--naranja-vivo);
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--blanco);
+            color: var(--naranja-vivo);
+          }
+          &:active {
+            background-color: var(--naranja-vivo);
+            color: var(--blanco);
+          }
+        }
+      }
+      &--carrito {
+        color: var(--blanco);
+        background-color: var(--naranja-vivo);
+        border: 1px solid var(--naranja-vivo);
+        border-radius: 10px;
+        padding: 7px 14px;
+        margin-top: 14px;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--blanco);
+          color: var(--naranja-vivo);
+        }
+        &:active {
+          background-color: var(--naranja-vivo);
+          color: var(--blanco);
+        }
+      }
+    }
+  }
+  &__huella {
+    position: absolute;
+    width: 64px;
+    height: 91px;
+    top: 398px;
+    left: 898px;
+    transform: rotate(280deg);
+  }
+  &__mancha {
+    position: absolute;
+    width: 225px;
+    height: 198px;
+    top: 551px;
+    left: -162px;
+  }
+}
