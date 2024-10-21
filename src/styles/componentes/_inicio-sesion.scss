@@ -1,0 +1,73 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;
+
+  &__incio-sesion {
+    align-items: start;
+    width: 50%;
+
+    &--encabezado {
+      color: var(--naranja-vivo);
+      margin: 20px;
+    }
+
+    &--contenedor {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      border: 1px solid var(--melocoton-suave);
+      border-radius: 10px;
+      padding: 30px;
+      gap: 16px;
+      width: 100%;
+
+      .cajita {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .form-control {
+          border: 1px solid var(--marron-suave);
+          width: Fill (522px) px;
+          height: Hug (40.64px) px;
+          border-radius: 8px;
+          padding: 12px 20px 12px 20px;
+        }
+
+        ::placeholder {
+          color: var(--marron-suave);
+          opacity: 1;
+        }
+      }
+
+      .contrasena {
+        width: 100%;
+        border-bottom: 1px solid var(--melocoton-suave);
+        padding: 10px;
+      }
+
+      a {
+        color: var(--naranja-vivo);
+      }
+
+      button {
+        width: Fixed (144px) px;
+        height: Fixed (47px) px;
+        padding: 17px 24px 17px 24px;
+        gap: 12px;
+        border-radius: 24px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        color: var(--blanco);
+        background-color: var(--marron-tierra);
+        font-weight: bold;
+      }
+    }
+  }
+}
