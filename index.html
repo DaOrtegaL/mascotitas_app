@@ -13,7 +13,6 @@
   <header-mascotitas></header-mascotitas>
   <div class="home-page">
     <div class="home-page__carrusel">
-
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -43,8 +42,6 @@
                 amor incondicional es el mejor remedio para un mal día.
               </p>
             </div>
-
-
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,29 +51,22 @@
           </button>
         </div>
       </div>
-
-
-
       <div class="home-page__titulo">
         <h2>Descubre las ventajas de comprar desde la comodidad de tu hogar</h2>
       </div>
-
       <div class="home-page__contenedor">
         <div class="home-page__contenedor--caja">
-
           <div class="borde-icono">
             <div class="borde-icono2">
               <img src="./public/images/body_domicilos_logo.svg" alt="Logo domicilio" class="icono" width="24px" height="25px"/>
             </div>
           </div>
-
           <h3 class="titulo">Domicilios en Bogotá</h3>
           <p class="parrafo">
             Recibe tus productos en la puerta de tu casa en tiempo récord.
           </p>
           <a href=""><button class="informacion"> Más información </button></a>
         </div>
-
         <div class="home-page__contenedor--caja">
           
           <div class="borde-icono">
@@ -84,7 +74,6 @@
               <img src="./public/images/body_pagos_logo.svg" alt="Logo pago" class="icono" width="24px" height="25px"/>
             </div>
           </div>
-
           <h3 class="titulo">Pagos seguros</h3>
           <p class="parrafo">
             Compra tranquila con opciones de pago seguras y confiables.
@@ -95,9 +84,12 @@
       <div class="home-page__titulo">
         <h2>Productos más vendidos</h2>
       </div>
+      <div id="products-container" class="home-page__container-grid">
+        <!-- Aqui van a estar las tarjetas de los productos -->
+      </div>
     </div>
-
     <footer-mascotitas></footer-mascotitas>
+    <script type="module" src="/src/js/productos_mas_vendidos.js"></script>
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/header.js"></script>
 </body>
