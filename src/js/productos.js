@@ -3,7 +3,7 @@ const renderProducts = (data) => {
   productsContainer.innerHTML = '';
   data.products.forEach((producto) => {
     const productCard = `
-      <div class="productos__grid--card">
+      <div class="card">
         <div class="image_container">
           <img src="/public/images/productos/${producto.image}" alt="${producto.name}" class="card-image">
         </div>
