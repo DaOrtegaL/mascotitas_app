@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main class="main">
+      <div class="main__titulo">
+        <h2><b>Crea tu nueva cuenta</b></h2>
+      </div>
+      <div class="main__informacion">
+        <p>¿Ya tienes una cuenta con nosotros? <a href="#">Ingresa aquí</a></p>
+
+        <p class="seccion"><span>1</span> Información personal</p>
+
+        <form class="main__informacion--personal">
+          <div class="nombres">
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Nombre *"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="apellido"
+              placeholder="Apellido *"
+            />
+          </div>
+          <select class="lista" aria-label="Default select example">
+            <option selected>Tipo de contribuyente</option>
+            <option value="1">Cédula de ciudadanía</option>
+            <option value="2">Cédula de extrangería</option>
+            <option value="3">NIT</option>
+            <option value="3">Pasaporte</option>
+            <option value="3">Documento de identificación extranjero</option>
+          </select>
+          <div class="documento">
+            <input
+              type="number"
+              class="form-control"
+              id="numero-documento"
+              placeholder="No. de documento de identidad"
+            />
+          </div>
+          <div class="direccion">
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress2"
+              placeholder="Direccion *"
+            />
+          </div>
+          <div class="info-adicional">
+            <input
+              type="text"
+              class="form-control"
+              id="Informacion adicional"
+              placeholder="Informacion adicional"
+            />
+          </div>
+        </form>
+
+        <p class="seccion"><span>2</span> Información de inicio de sesión</p>
+
+        <form class="main__informacion--sesion">
+          <div class="email">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Correo electrónico *"
+            />
+          </div>
+          <div class="contrasena">
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="inputPassword"
+                class="contrasena-input"
+                placeholder="Contraseña"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                onclick="togglePassword('inputPassword')"
+              ></button>
+            </div>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="inputConfirmPassword"
+                class="contrasena-input"
+                placeholder="Confirmar contraseña"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                onclick="togglePassword('inputConfirmPassword')"
+              >
+                Mostrar
+              </button>
+            </div>
+          </div>
+          <div class="checkbox">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="check"
+            />
+            <label class="form-check-label" for="check">
+              Acepto terminos y condiciones
+            </label>
+          </div>
+          <button class="boton">Crear cuenta</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

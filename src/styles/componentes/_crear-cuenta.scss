@@ -1,0 +1,216 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;
+  &__titulo {
+    align-items: flex-start;
+    color: var(--naranja-vivo);
+    width: 44%;
+    padding: 16px 0;
+  }
+  &__informacion {
+    padding: 24px;
+    border: 3px solid var(--melocoton-suave);
+    border-radius: 2%;
+    a {
+      color: var(--naranja-vivo);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    span {
+      width: 26px;
+      height: 26px;
+      padding: 2px 7px;
+      color: var(--blanco);
+      background-color: var(--marron-suave);
+      border-radius: 100%;
+    }
+    p {
+      padding-bottom: 10px;
+    }
+    .seccion {
+      padding-top: 25px;
+    }
+
+    &--personal {
+      .nombres {
+        input {
+          border: 1px solid var(--marron-suave);
+          margin: 8px 0;
+          width: 257px;
+          height: 38px;
+          border-radius: 8px;
+        }
+      }
+      ::placeholder {
+        color: var(--marron-suave);
+        opacity: 1;
+        text-align: start;
+        padding: 3px;
+      }
+      .lista {
+        padding: 5px;
+        border: 1px solid var(--marron-suave);
+        width: 519px;
+        height: 38px;
+        border-radius: 8px;
+        margin: 4px 0;
+        color: var(--marron-suave);
+
+        option {
+          width: 519px;
+          height: 40px;
+          color: var(--marron-suave);
+        }
+      }
+      .form-control {
+        border: 1px solid var(--marron-suave);
+        width: 519px;
+        height: 38px;
+        border-radius: 8px;
+        margin: 4px 0;
+        ::placeholder {
+          color: var(--marron-suave);
+          opacity: 1;
+          text-align: start;
+          padding: 3px;
+        }
+      }
+    }
+    &--sesion {
+      .email {
+        .form-control {
+          border: 1px solid var(--marron-suave);
+          width: 519px;
+          height: 38px;
+          margin: 4px 0;
+          border-radius: 8px;
+        }
+        ::placeholder {
+          color: var(--marron-suave);
+          opacity: 1;
+          text-align: start;
+          padding: 3px;
+        }
+      }
+      .contrasena {
+        display: flex;
+        flex-direction: row;
+
+        .form-control {
+          border: 1px solid var(--marron-suave);
+          width: 257px;
+          margin: 4px 0;
+          height: 38px;
+          border-radius: 8px;
+        }
+        ::placeholder {
+          color: var(--marron-suave);
+          opacity: 1;
+          text-align: start;
+          padding: 3px;
+        }
+        .password-wrapper {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          border: 1px solid var(--marron-suave);
+          width: 257px;
+          padding: 4px 10px;
+          height: 38px;
+          border-radius: 8px;
+          .contrasena-input {
+            background-color: var(--blanco);
+            border: none;
+          }
+        }
+        .toggle-password {
+          transform: translateY(-50%);
+          background-color: red;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          color: #007bff;
+        }
+      }
+      .checkbox {
+        padding: 10px 0;
+        /* Ocultar el checkbox original */
+        .form-check-input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        /* Crear un estilo para el checkbox personalizado */
+        .form-check-label {
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+          font-size: 16px;
+          user-select: none;
+        }
+
+        /* El cuadrado del checkbox */
+        .form-check-label::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 15px;
+          height: 15px;
+          border: 2px solid var(--marron-suave);
+          border-radius: 3px;
+          background-color: #fff;
+        }
+
+        /* El icono del check cuando se selecciona */
+        .form-check-input:checked + .form-check-label::before {
+          background-color: var(--marron-tierra);
+          border-color: var(--marron-suave);
+        }
+
+        /* Crear el "check" */
+        .form-check-label::after {
+          content: '';
+          position: absolute;
+          left: 7px;
+          top: 4px;
+          width: 4px;
+          height: 7px;
+          border: solid white;
+          border-width: 0 1px 1px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+        }
+
+        /* Mostrar el "check" solo cuando esté seleccionado */
+        .form-check-input:checked + .form-check-label::after {
+          opacity: 1;
+        }
+      }
+      .boton {
+        background-color: var(--marron-tierra);
+        color: var(--blanco-crema);
+        font-size: 20px;
+        font-weight: 550;
+        line-height: 28px;
+        text-align: justify;
+        width: 192px;
+        height: 47px;
+        padding: 5px 32px;
+        border-radius: 24px;
+        cursor: pointer;
+        &:active {
+          background-color: var(--marron-suave);
+        }
+      }
+    }
+  }
+}
