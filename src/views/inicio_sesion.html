@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio sesion</title>
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+
+  <body>
+    <header-mascotitas></header-mascotitas>
+
+    <main class="main">
+      <img
+        src="/public/images/mancha-gris 2.png"
+        alt=""
+        height="202px"
+        width="67px"
+        class="main__mancha-gris"
+      />
+      <img
+        src="/public/images/huella-1 1.png"
+        alt=""
+        height="275px"
+        width="189px"
+        class="main__huella"
+      />
+      <img
+        src="/public/images/hueso.png"
+        alt=""
+        height="188px"
+        width="169px"
+        class="main__hueso"
+      />
+      <img
+        src="/public/images/mancha-beige 2.png"
+        alt=""
+        height="198px"
+        width="62px"
+        class="main__mancha-beige"
+      />
+      <div class="main__incio-sesion">
+        <h2 class="main__incio-sesion--encabezado">Iniciar sesión</h2>
+        <div class="main__incio-sesion--contenedor">
+          <!-- Primer texto para "Crear cuenta" -->
+          <div class="titulo">
+            <p class="parrafo">
+              ¿No tienes una cuenta aún? <a href="#!">Créala aquí</a>
+            </p>
+          </div>
+          <!-- Primera Cajita -->
+          <div data-mdb-input-init class="cajita">
+            <label class="form-label" for="form2Example1"
+              >Correo Electronico</label
+            >
+            <input
+              type="email"
+              id="form2Example1"
+              class="form-control"
+              placeholder="Correo electrónico *"
+            />
+          </div>
+          <!-- Segunda Cajita -->
+          <div data-mdb-input-init class="cajita">
+            <label class="form-label" for="form2Example1">Contraseña</label>
+            <div class="form-control">
+              <input
+                type="email"
+                id="form2Example1"
+                class="password"
+                placeholder="Contraseña*"
+              />
+              <img
+                src="/public/images/icono_esconder_clave.svg"
+                alt=""
+                class="icono"
+              />
+            </div>
+          </div>
+          <!-- Olvidar contraseña -->
+          <div class="contrasena">
+            <p><a href="#!">¿Olvidaste tu contraseña?</a></p>
+          </div>
+          <!-- terminos y condiciones -->
+          <label>
+            <input type="checkbox" required />
+            Acepto términos y condiciones. *
+          </label>
+          <!-- Ingresar button -->
+          <button
+            type="button"
+            data-mdb-button-init
+            data-mdb-ripple-init
+            class="incio-sesion__contenedor--boton"
+          >
+            Ingresar
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer-mascotitas></footer-mascotitas>
+    <script type="module" src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+  </body>
+</html>

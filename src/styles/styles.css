@@ -201,6 +201,7 @@
   --lg: 992px;
   --xl: 1200px;
   --xxl: 1400px;
+  --marron-suave: #C7A38E;
 }
 
 * {
@@ -495,6 +496,125 @@ p {
 .productos__pagination--anterior:active, .productos__pagination--siguiente:active, .productos__pagination--numero:active {
   background-color: var(--blanco);
   color: var(--marron-tierra);
+}
+
+.main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px 80px 20px 20px;
+}
+.main__mancha-gris {
+  position: absolute;
+  left: 0;
+  top: 20;
+}
+.main__huella {
+  position: absolute;
+  left: 200px;
+  top: 45px;
+}
+.main__hueso {
+  position: absolute;
+  left: 500px;
+  top: 300px;
+}
+.main__mancha-beige {
+  position: absolute;
+  right: 0;
+  top: 20;
+}
+.main__incio-sesion {
+  align-items: start;
+  width: 40%;
+}
+.main__incio-sesion--encabezado {
+  color: var(--naranja-vivo);
+  margin: 20px;
+}
+.main__incio-sesion--contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border: 1px solid var(--melocoton-suave);
+  border-radius: 10px;
+  padding: 30px;
+  gap: 16px;
+  width: 100%;
+}
+.main__incio-sesion--contenedor label {
+  color: var(--marron-tierra);
+}
+.main__incio-sesion--contenedor .parrafo {
+  color: var(--marron-tierra);
+}
+.main__incio-sesion--contenedor .cajita {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 95%;
+}
+.main__incio-sesion--contenedor .cajita .form-label {
+  color: var(--marron-tierra);
+}
+.main__incio-sesion--contenedor .cajita .form-control {
+  border: 1px solid var(--marron-suave);
+  width: Fill 522px px;
+  height: Hug 40.64px px;
+  border-radius: 8px;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--marron-tierra);
+}
+.main__incio-sesion--contenedor .cajita .form-control:focus {
+  border-color: var(--marron-suave);
+  outline-color: var(--marron-suave);
+}
+.main__incio-sesion--contenedor .cajita .form-control .password {
+  border: none;
+  color: var(--marron-tierra);
+}
+.main__incio-sesion--contenedor .cajita .form-control .password:focus {
+  border: none;
+  outline: none;
+}
+.main__incio-sesion--contenedor .cajita ::-moz-placeholder {
+  color: var(--marron-suave);
+  opacity: 1;
+}
+.main__incio-sesion--contenedor .cajita ::placeholder {
+  color: var(--marron-suave);
+  opacity: 1;
+}
+.main__incio-sesion--contenedor .contrasena {
+  width: 100%;
+  border-bottom: 1px solid var(--melocoton-suave);
+  padding: 10px;
+}
+.main__incio-sesion--contenedor a {
+  color: var(--naranja-vivo);
+}
+.main__incio-sesion--contenedor button {
+  width: 140px;
+  height: 47px;
+  padding: 25px 17px 25px 17x;
+  gap: 12px;
+  border-radius: 24px;
+  opacity: 0px;
+  border: 1px 0px 0px 0px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: large;
+  color: var(--blanco);
+  background-color: var(--marron-tierra);
+  border: none;
 }
 
 .carousel {
