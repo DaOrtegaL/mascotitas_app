@@ -1,15 +1,40 @@
 .main {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: end;
   align-items: end;
   width: 100%;
   min-height: 100%;
-  padding: 24px;
+  padding: 20px 80px 20px 20px;
+
+  &__mancha-gris {
+    position: absolute;
+    left: 0;
+    top: 20;
+  }
+
+  &__huella {
+    position: absolute;
+    left: 200px;
+    top: 45px;
+  }
+
+  &__hueso {
+    position: absolute;
+    left: 500px;
+    top: 300px;
+  }
+
+  &__mancha-beige {
+    position: absolute;
+    right: 0;
+    top: 20;
+  }
 
   &__incio-sesion {
     align-items: start;
-    width: 50%;
+    width: 40%;
 
     &--encabezado {
       color: var(--naranja-vivo);
@@ -27,10 +52,23 @@
       gap: 16px;
       width: 100%;
 
+      label {
+        color: var(--marron-tierra);
+      }
+
+      .parrafo {
+        color: var(--marron-tierra);
+      }
+
       .cajita {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 95%;
+
+        .form-label {
+          color: var(--marron-tierra);
+        }
 
         .form-control {
           border: 1px solid var(--marron-suave);
@@ -38,6 +76,22 @@
           height: Hug (40.64px) px;
           border-radius: 8px;
           padding: 12px 20px 12px 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          color: var(--marron-tierra);
+          &:focus {
+            border-color: var(--marron-suave);
+            outline-color: var(--marron-suave);
+          }
+          .password {
+            border: none;
+            color: var(--marron-tierra);
+            &:focus {
+              border: none;
+              outline: none;
+            }
+          }
         }
 
         ::placeholder {
@@ -57,16 +111,19 @@
       }
 
       button {
-        width: Fixed (144px) px;
-        height: Fixed (47px) px;
-        padding: 17px 24px 17px 24px;
+        width: 140px;
+        height: 47px;
+        padding: 25px 17px 25px 17x;
         gap: 12px;
         border-radius: 24px;
-        border: 1px 0px 0px 0px;
         opacity: 0px;
+        border: 1px 0px 0px 0px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: large;
         color: var(--blanco);
         background-color: var(--marron-tierra);
-        font-weight: bold;
+        border: none;
       }
     }
   }
