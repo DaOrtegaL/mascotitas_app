@@ -13,6 +13,39 @@
   src: url("/public/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
 }
+.home-page {
+  position: relative;
+}
+.home-page__mancha-gris {
+  position: absolute;
+  left: 0;
+  top: 500px;
+}
+.home-page__mancha-beige {
+  position: absolute;
+  right: 0;
+  top: 250px;
+}
+.home-page__huella1 {
+  position: absolute;
+  right: 100px;
+  top: 700px;
+}
+.home-page__huella2 {
+  position: absolute;
+  left: 120px;
+  top: 900px;
+}
+.home-page__mancha-gris1 {
+  position: absolute;
+  right: 0;
+  top: 1050px;
+}
+.home-page__mancha-beige1 {
+  position: absolute;
+  left: 0;
+  top: 1200px;
+}
 .home-page__carrusel {
   display: flex;
   flex-direction: column;
@@ -196,12 +229,12 @@
   --blanco: #ffffff;
   --negro: #000000;
   --melocoton-suave: #ffe7da;
+  --marron-suave: #c7a38e;
   --sm: 576px;
   --md: 768px;
   --lg: 992px;
   --xl: 1200px;
   --xxl: 1400px;
-  --marron-suave: #C7A38E;
 }
 
 * {
