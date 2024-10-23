@@ -294,7 +294,7 @@ p {
     <header class="header">
         <a href="">
             <picture class="header__logo">
-                <img src="./public/images/logoHeader.png" alt="logo header">
+                <img src="/public/images/logoHeader.png" alt="logo header">
             </picture>
         </a>
         <picture class="header__menu-hamburguesa">

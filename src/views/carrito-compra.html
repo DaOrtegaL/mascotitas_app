@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../styles/carrito-compra.css" />
+  </head>
+  <body>
+    <header-mascotitas></header-mascotitas>
+    <main class="carrito">
+      <section class="carrito__lista">
+        <h2 class="carrito__lista--titulo">Carrito Compra</h2>
+        <ul class="carrito__lista--compra">
+          <!-- se crea lista de compra -->
+        </ul>
+      </section>
+      <section class="carrito__total">
+        <div class="carrito__total--contenedor">
+          <h2 class="carrito__total--titulo">Resumen del pedido</h2>
+          <div class="carrito__total--card">
+            <div class="carrito__total--productos carrito__total--item">
+              <p class="card-lateral-izquierda">3 productos</p>
+              <p class="card-lateral-derecha">$ 840.000</p>
+            </div>
+            <div class="carrito__total--envio carrito__total--item">
+              <p class="card-lateral-izquierda">Envio</p>
+              <p class="card-lateral-derecha">Gratis</p>
+            </div>
+            <div class="carrito__total--total carrito__total--item">
+              <p class="card-lateral-izquierda">Total</p>
+              <p class="card-lateral-derecha">$840.000</p>
+            </div>
+            <button class="carrito__total--button">Continuar al pago</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer-mascotitas></footer-mascotitas>
+    <script type="module" src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+    <script src="/src/js/carrito_compra.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "productos": [
+        {
+          "nombre": "Monello Dog Tradicional",
+          "peso": "25 kg",
+          "precio": 280000,
+          "cantidad": 1,
+          "imagen": "../../public/images/productos/monello_tradicional.png"
+        },
+        {
+          "nombre": "Monello Cat",
+          "peso": "10 kg",
+          "precio": 150000,
+          "cantidad": 1,
+          "imagen": "../../public/images/productos/bravecto.png"
+        },
+        {
+            "nombre": "Monello patos",
+            "peso": "12 kg",
+            "precio": 90000,
+            "cantidad": 1,
+            "imagen": "../../public/images/productos/bravecto.png"
+          }
+      ]    
+}
