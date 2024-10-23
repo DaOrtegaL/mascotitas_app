@@ -650,6 +650,10 @@ p {
   border: none;
 }
 
+.home-page {
+  position: relative;
+}
+
 .carousel {
   position: relative;
 }
