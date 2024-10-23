@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos</title>
     <link rel="stylesheet" href="/src/styles/styles.css" />
+    <script type="module" src="/main.js"></script>
   </head>
   <body>
     <header-mascotitas></header-mascotitas>
@@ -14,7 +15,405 @@
           <div class="filtro_categoria">
             <span class="">Perros</span><span>Gatos</span><span>Otros</span>
           </div>
-          <div class="filtro_sub-categoria"></div>
+          <div class="filtro_sub-categoria">
+            <div class="accordion" id="main-filter">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <div class="titulo-icon">
+                      <img
+                        id="alimento"
+                        class="icono-titulo"
+                        src="/public/images/icons/alimento-marron.svg"
+                        alt=""
+                      />
+                      Alimento
+                    </div>
+                    <div class="expand-icon">
+                      <svg
+                        width="16"
+                        height="11"
+                        viewBox="0 0 22 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.9801 10.9362C10.5575 10.9371 10.1479 10.7896 9.82247 10.5194L0.778436 3.26936C0.409047 2.9617 0.176752 2.51961 0.132654 2.04034C0.0885558 1.56107 0.236266 1.08387 0.543291 0.713729C0.850315 0.343586 1.2915 0.110818 1.7698 0.0666296C2.2481 0.0224413 2.72432 0.170452 3.09371 0.478104L10.9801 6.7856L18.8665 0.768105C19.0515 0.617548 19.2644 0.505116 19.4929 0.437271C19.7215 0.369426 19.9611 0.347506 20.1981 0.37277C20.4351 0.398035 20.6648 0.469986 20.874 0.584488C21.0831 0.698991 21.2677 0.853787 21.4169 1.03998C21.5826 1.22634 21.708 1.44498 21.7854 1.68219C21.8628 1.9194 21.8905 2.17007 21.8667 2.41849C21.843 2.66692 21.7683 2.90775 21.6473 3.1259C21.5263 3.34404 21.3617 3.5348 21.1637 3.68623L12.1197 10.6281C11.7849 10.8556 11.3837 10.9641 10.9801 10.9362Z"
+                          fill="#593D2D"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="accordion-ul">
+                      <li class="accordion-li">
+                        <label for="check-concentrado"
+                          >Concentrado<input
+                            id="check-concentrado"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-snacks"
+                          >Snacks<input
+                            id="check-snacks"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-comida-humeda"
+                          >Comida húmeda<input
+                            id="check-comida-humeda"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-comida-medicada"
+                          >Comida medicada<input
+                            id="check-comida-medicada"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="collapseTwo"
+                  >
+                    <div class="titulo-icon">
+                      <img
+                        id="accesorios"
+                        class="icono-titulo"
+                        src="/public/images/icons/accesorios-marron.svg"
+                        alt=""
+                      />
+                      Accesorios
+                    </div>
+                    <div class="expand-icon">
+                      <svg
+                        width="16"
+                        height="11"
+                        viewBox="0 0 22 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.9801 10.9362C10.5575 10.9371 10.1479 10.7896 9.82247 10.5194L0.778436 3.26936C0.409047 2.9617 0.176752 2.51961 0.132654 2.04034C0.0885558 1.56107 0.236266 1.08387 0.543291 0.713729C0.850315 0.343586 1.2915 0.110818 1.7698 0.0666296C2.2481 0.0224413 2.72432 0.170452 3.09371 0.478104L10.9801 6.7856L18.8665 0.768105C19.0515 0.617548 19.2644 0.505116 19.4929 0.437271C19.7215 0.369426 19.9611 0.347506 20.1981 0.37277C20.4351 0.398035 20.6648 0.469986 20.874 0.584488C21.0831 0.698991 21.2677 0.853787 21.4169 1.03998C21.5826 1.22634 21.708 1.44498 21.7854 1.68219C21.8628 1.9194 21.8905 2.17007 21.8667 2.41849C21.843 2.66692 21.7683 2.90775 21.6473 3.1259C21.5263 3.34404 21.3617 3.5348 21.1637 3.68623L12.1197 10.6281C11.7849 10.8556 11.3837 10.9641 10.9801 10.9362Z"
+                          fill="#593D2D"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="accordion-ul">
+                      <li class="accordion-li">
+                        <label for="check-comederos"
+                          >Comederos<input
+                            id="check-comederos"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-juguetes"
+                          >Juguetes<input
+                            id="check-juguetes"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-camas"
+                          >Camas<input
+                            id="check-camas"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="true"
+                    aria-controls="collapseThree"
+                  >
+                    <div class="titulo-icon">
+                      <img
+                        id="aseo"
+                        class="icono-titulo"
+                        src="/public/images/icons/aseo-marron.svg"
+                        alt=""
+                      />
+                      Aseo
+                    </div>
+                    <div class="expand-icon">
+                      <svg
+                        width="16"
+                        height="11"
+                        viewBox="0 0 22 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.9801 10.9362C10.5575 10.9371 10.1479 10.7896 9.82247 10.5194L0.778436 3.26936C0.409047 2.9617 0.176752 2.51961 0.132654 2.04034C0.0885558 1.56107 0.236266 1.08387 0.543291 0.713729C0.850315 0.343586 1.2915 0.110818 1.7698 0.0666296C2.2481 0.0224413 2.72432 0.170452 3.09371 0.478104L10.9801 6.7856L18.8665 0.768105C19.0515 0.617548 19.2644 0.505116 19.4929 0.437271C19.7215 0.369426 19.9611 0.347506 20.1981 0.37277C20.4351 0.398035 20.6648 0.469986 20.874 0.584488C21.0831 0.698991 21.2677 0.853787 21.4169 1.03998C21.5826 1.22634 21.708 1.44498 21.7854 1.68219C21.8628 1.9194 21.8905 2.17007 21.8667 2.41849C21.843 2.66692 21.7683 2.90775 21.6473 3.1259C21.5263 3.34404 21.3617 3.5348 21.1637 3.68623L12.1197 10.6281C11.7849 10.8556 11.3837 10.9641 10.9801 10.9362Z"
+                          fill="#593D2D"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="accordion-ul">
+                      <li class="accordion-li">
+                        <label for="check-desechables"
+                          >Desechables<input
+                            id="check-desechables"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-hora-bano"
+                          >Hora del baño<input
+                            id="check-hora-bano"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-cuidado-mascota"
+                          >Cuidado de mascota<input
+                            id="check-cuidado-mascota"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-ambiente"
+                          >Ambiente<input
+                            id="check-ambiente"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="true"
+                    aria-controls="collapseFour"
+                  >
+                    <div class="titulo-icon">
+                      <img
+                        id="salud"
+                        class="icono-titulo"
+                        src="/public/images/icons/salud-marron.svg"
+                        alt=""
+                      />
+                      Salud
+                    </div>
+                    <div class="expand-icon">
+                      <svg
+                        width="16"
+                        height="11"
+                        viewBox="0 0 22 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.9801 10.9362C10.5575 10.9371 10.1479 10.7896 9.82247 10.5194L0.778436 3.26936C0.409047 2.9617 0.176752 2.51961 0.132654 2.04034C0.0885558 1.56107 0.236266 1.08387 0.543291 0.713729C0.850315 0.343586 1.2915 0.110818 1.7698 0.0666296C2.2481 0.0224413 2.72432 0.170452 3.09371 0.478104L10.9801 6.7856L18.8665 0.768105C19.0515 0.617548 19.2644 0.505116 19.4929 0.437271C19.7215 0.369426 19.9611 0.347506 20.1981 0.37277C20.4351 0.398035 20.6648 0.469986 20.874 0.584488C21.0831 0.698991 21.2677 0.853787 21.4169 1.03998C21.5826 1.22634 21.708 1.44498 21.7854 1.68219C21.8628 1.9194 21.8905 2.17007 21.8667 2.41849C21.843 2.66692 21.7683 2.90775 21.6473 3.1259C21.5263 3.34404 21.3617 3.5348 21.1637 3.68623L12.1197 10.6281C11.7849 10.8556 11.3837 10.9641 10.9801 10.9362Z"
+                          fill="#593D2D"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="accordion-ul">
+                      <li class="accordion-li">
+                        <label for="check-desparasitantes"
+                          >Desparasitantes<input
+                            id="check-desparasitantes"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-vitaminas"
+                          >Vitaminas<input
+                            id="check-vitaminas"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-medicamentos"
+                          >Medicamentos<input
+                            id="check-medicamentos"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="filtro_sub-categoria">
+            <div class="accordion" id="marcas-filter">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="true"
+                    aria-controls="collapseFive"
+                  >
+                    <div class="titulo-icon">
+                      <img
+                        id="marcas"
+                        class="icono-titulo"
+                        src="/public/images/icons/marcas-marron.svg"
+                        alt=""
+                      />
+                      Marcas
+                    </div>
+                    <div class="expand-icon">
+                      <svg
+                        width="16"
+                        height="11"
+                        viewBox="0 0 22 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.9801 10.9362C10.5575 10.9371 10.1479 10.7896 9.82247 10.5194L0.778436 3.26936C0.409047 2.9617 0.176752 2.51961 0.132654 2.04034C0.0885558 1.56107 0.236266 1.08387 0.543291 0.713729C0.850315 0.343586 1.2915 0.110818 1.7698 0.0666296C2.2481 0.0224413 2.72432 0.170452 3.09371 0.478104L10.9801 6.7856L18.8665 0.768105C19.0515 0.617548 19.2644 0.505116 19.4929 0.437271C19.7215 0.369426 19.9611 0.347506 20.1981 0.37277C20.4351 0.398035 20.6648 0.469986 20.874 0.584488C21.0831 0.698991 21.2677 0.853787 21.4169 1.03998C21.5826 1.22634 21.708 1.44498 21.7854 1.68219C21.8628 1.9194 21.8905 2.17007 21.8667 2.41849C21.843 2.66692 21.7683 2.90775 21.6473 3.1259C21.5263 3.34404 21.3617 3.5348 21.1637 3.68623L12.1197 10.6281C11.7849 10.8556 11.3837 10.9641 10.9801 10.9362Z"
+                          fill="#593D2D"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="accordion-ul">
+                      <li class="accordion-li">
+                        <label for="check-dog-chow"
+                          >Dog Chow<input
+                            id="check-dog-chow"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-monello"
+                          >Monello<input
+                            id="check-monello"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-chunky"
+                          >Chunky<input
+                            id="check-chunky"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-dogourmet"
+                          >Dogourmet<input
+                            id="check-dogourmet"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-ringo"
+                          >Ringo<input
+                            id="check-ringo"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                      <li class="accordion-li">
+                        <label for="check-pro-plan"
+                          >Pro Plan<input
+                            id="check-pro-plan"
+                            class="check-concentrado"
+                            type="checkbox" /><span class="custom-check"></span
+                        ></label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="products-container" class="productos__container--grid">
           <!-- Aqui van a estar las tarjetas de los productos -->
@@ -26,5 +425,6 @@
     <script type="module" src="/src/js/header.js"></script>
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/productos.js"></script>
+    <!-- <script type="module" src="/node_modules/bootstrap/js/index.esm.js"></script> -->
   </body>
 </html>
