@@ -819,18 +819,26 @@ p {
     // Referencias de los elementos
     const perrosItem = this.shadowRoot.querySelector('.perro');
     const gatosItem = this.shadowRoot.querySelector('.gato');
-    const listaPerro = this.shadowRoot.querySelector('.header__categoria--lista-perros');
-    const listaGato = this.shadowRoot.querySelector('.header__categoria--lista-gatos');
+    const listaPerro = this.shadowRoot.querySelector(
+      '.header__categoria--lista-perros',
+    );
+    const listaGato = this.shadowRoot.querySelector(
+      '.header__categoria--lista-gatos',
+    );
     const menuH = this.shadowRoot.querySelector('.header__menu-hamburguesa');
     const lateral = this.shadowRoot.querySelector('.header__lateral');
 
     // Headers dentro del listado
-    const headers = this.shadowRoot.querySelectorAll('.header__categoria--lista ul h2');
+    const headers = this.shadowRoot.querySelectorAll(
+      '.header__categoria--lista ul h2',
+    );
 
     // Lógica para abrir/cerrar listas de categorías
     headers.forEach((h2) => {
       h2.addEventListener('click', function () {
-        const listItems = this.parentElement.querySelectorAll('.header__categoria--lista ul li');
+        const listItems = this.parentElement.querySelectorAll(
+          '.header__categoria--lista ul li',
+        );
         listItems.forEach((li) => {
           li.classList.toggle('open');
         });
