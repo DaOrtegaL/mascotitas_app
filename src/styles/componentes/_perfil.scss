@@ -1,3 +1,114 @@
-.home-page {
+.main {
+  display: flex;
   position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px 80px;
+
+  &__usuario {
+    align-items: start;
+    width: 40%;
+
+    &--titulo {
+      color: var(--naranja-vivo);
+      margin: 20px;
+    }
+
+    &--contenedor {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      border: 1px solid var(--melocoton-suave);
+      border-radius: 10px;
+      padding: 30px;
+      width: 120%;
+
+      .titulo {
+        color: var(--marron-tierra);
+        margin: 5px;
+      }
+
+      .texto {
+        color: var(--marron-tierra);
+        margin: 5px;
+      }
+
+      .desplegable {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .lista {
+          border: 1px solid var(--marron-suave);
+          width: 130%;
+          height: Hug (40.64px) px;
+          border-radius: 8px;
+          padding: 8px 12px 8px 12px;
+          color: var(--marron-suave);
+        }
+      }
+
+      .form-control {
+        border: 1px solid var(--marron-suave);
+        width: Fill (522px) px;
+        height: Hug (40.64px) px;
+        border-radius: 8px;
+        padding: 8px 12px 8px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: var(--marron-tierra);
+
+        ::placeholder {
+          color: var(--marron-suave);
+          opacity: 1;
+        }
+
+        input {
+          border: none;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+
+      .nombre-apellido {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        .form-control {
+          border: 1px solid var(--marron-suave);
+          width: Fill (522px) px;
+          height: Hug (40.64px) px;
+          border-radius: 8px;
+          padding: 8px 12px 8px 12px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          color: var(--marron-tierra);
+
+          ::placeholder {
+            color: var(--marron-suave);
+            opacity: 1;
+          }
+
+          input {
+            border: none;
+
+            &:focus {
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

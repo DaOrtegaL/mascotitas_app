@@ -12,52 +12,35 @@
     <header-mascotitas></header-mascotitas>
 
     <main class="main">
-      <img
-        src="/public/images/mancha-gris 2.png"
-        alt=""
-        height="202px"
-        width="67px"
-        class="main__mancha-gris"
-      />
-      <img
-        src="/public/images/huella-1 1.png"
-        alt=""
-        height="275px"
-        width="189px"
-        class="main__huella"
-      />
-      <img
-        src="/public/images/hueso.png"
-        alt=""
-        height="188px"
-        width="169px"
-        class="main__hueso"
-      />
-      <img
-        src="/public/images/mancha-beige 2.png"
-        alt=""
-        height="198px"
-        width="62px"
-        class="main__mancha-beige"
-      />
+      <!-- <img src="/public/images/mancha-gris 2.png" alt="" height="202px" width="67px" class="main__mancha-gris" />
+        <img src="/public/images/huella-1 1.png" alt="" height="275px" width="189px" class="main__huella" />
+        <img src="/public/images/hueso.png" alt="" height="188px" width="169px" class="main__hueso" />
+        <img src="/public/images/mancha-beige 2.png" alt="" height="198px" width="62px" class="main__mancha-beige" /> -->
+
       <div class="main__usuario">
         <h2 class="main__usuario--titulo">Hola Usuario</h2>
         <div class="main__usuario--contenedor">
           <!-- Primer texto -->
           <h4 class="titulo">Mis datos</h4>
-          <p>
+          <p class="texto">
             Modifica acá tus datos para que tu cuenta permanezca actualizada.
           </p>
-          <label class="form-label" for="form2Example1">Datos Personales</label>
+          <label class="titulo" for="form2Example1"
+            ><h4>Datos Personales</h4></label
+          >
           <div class="nombre-apellido">
             <div class="form-control">
               <input
                 type="text"
                 id="form2Example1"
-                class=""
+                class="input1"
                 placeholder="Nombre"
               />
-              <img src="" alt="" class="icono" />
+              <img
+                src="/public/images/Editar-perfil.svg"
+                alt=""
+                class="icono"
+              />
             </div>
             <div class="form-control">
               <input
@@ -66,12 +49,16 @@
                 class=""
                 placeholder="Apellido"
               />
-              <img src="" alt="" class="icono" />
+              <img
+                src="/public/images/Editar-perfil.svg"
+                alt=""
+                class="icono"
+              />
             </div>
           </div>
-          <div class="lista">
-            <label for="titulo">Tipo de contribuyente</label>
-            <select id="opciones" name="opciones">
+          <div class="desplegable">
+            <label for="titulo" class="texto">Tipo de contribuyente</label>
+            <select id="opciones" name="opciones" class="lista">
               <option value="opcion1">
                 Persona Natural - No resonsable del IVA
               </option>
@@ -94,7 +81,7 @@
               class=""
               placeholder="Numero identificacion"
             />
-            <img src="" alt="" class="icono" />
+            <img src="/public/images/Editar-perfil.svg" alt="" class="icono" />
           </div>
           <div class="form-control">
             <input
@@ -103,7 +90,7 @@
               class=""
               placeholder="Calle 1 #3-5"
             />
-            <img src="" alt="" class="icono" />
+            <img src="/public/images/Editar-perfil.svg" alt="" class="icono" />
           </div>
           <div class="form-control">
             <input
@@ -117,8 +104,10 @@
           <h4 class="titulo">Datos de Acceso</h4>
 
           <div data-mdb-input-init class="cajita">
-            <label class="form-label" for="form2Example1">Contraseña</label>
             <div class="form-control">
+              <label class="texto" for="form2Example1"
+                >Correo Electronico</label
+              >
               <input
                 type="email"
                 id="form2Example1"
@@ -132,7 +121,7 @@
               />
             </div>
             <div class="form-control">
-              <label class="form-label" for="form2Example1">Contraseña</label>
+              <label class="texto" for="form2Example1">Contraseña</label>
               <input
                 type="email"
                 id="form2Example1"

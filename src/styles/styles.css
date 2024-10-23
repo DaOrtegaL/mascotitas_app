@@ -650,8 +650,111 @@ p {
   border: none;
 }
 
-.home-page {
+.main {
+  display: flex;
   position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px 80px;
+}
+.main__usuario {
+  align-items: start;
+  width: 40%;
+}
+.main__usuario--titulo {
+  color: var(--naranja-vivo);
+  margin: 20px;
+}
+.main__usuario--contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border: 1px solid var(--melocoton-suave);
+  border-radius: 10px;
+  padding: 30px;
+  width: 120%;
+}
+.main__usuario--contenedor .titulo {
+  color: var(--marron-tierra);
+  margin: 5px;
+}
+.main__usuario--contenedor .texto {
+  color: var(--marron-tierra);
+  margin: 5px;
+}
+.main__usuario--contenedor .desplegable {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main__usuario--contenedor .desplegable .lista {
+  border: 1px solid var(--marron-suave);
+  width: 130%;
+  height: Hug 40.64px px;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+  color: var(--marron-suave);
+}
+.main__usuario--contenedor .form-control {
+  border: 1px solid var(--marron-suave);
+  width: Fill 522px px;
+  height: Hug 40.64px px;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--marron-tierra);
+}
+.main__usuario--contenedor .form-control ::-moz-placeholder {
+  color: var(--marron-suave);
+  opacity: 1;
+}
+.main__usuario--contenedor .form-control ::placeholder {
+  color: var(--marron-suave);
+  opacity: 1;
+}
+.main__usuario--contenedor .form-control input {
+  border: none;
+}
+.main__usuario--contenedor .form-control input:focus {
+  border: none;
+  outline: none;
+}
+.main__usuario--contenedor .nombre-apellido {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.main__usuario--contenedor .nombre-apellido .form-control {
+  border: 1px solid var(--marron-suave);
+  width: Fill 522px px;
+  height: Hug 40.64px px;
+  border-radius: 8px;
+  padding: 8px 12px 8px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--marron-tierra);
+}
+.main__usuario--contenedor .nombre-apellido .form-control ::-moz-placeholder {
+  color: var(--marron-suave);
+  opacity: 1;
+}
+.main__usuario--contenedor .nombre-apellido .form-control ::placeholder {
+  color: var(--marron-suave);
+  opacity: 1;
+}
+.main__usuario--contenedor .nombre-apellido .form-control input {
+  border: none;
+}
+.main__usuario--contenedor .nombre-apellido .form-control input:focus {
+  border: none;
+  outline: none;
 }
 
 .carousel {
