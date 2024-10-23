@@ -1,3 +1,4 @@
+//Estilos para la vista de producto detalle
 .main {
   position: relative;
 
@@ -8,11 +9,48 @@
     align-items: center;
     justify-content: center;
     margin: 40px 112px;
-    @media (max-width: 575px) {
-      flex-direction: column;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      margin: 40px 0px;
+      &__imagen {
+        width: 50%;
+        border: 1px solid var(--naranja-vivo);
+        border-radius: 8px;
+        img {
+          max-width: fill;
+          max-height: fixed;
+        }
+      }
     }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin: 40px 0px;
+      &__imagen {
+        width: 50%;
+        border: 1px solid var(--naranja-vivo);
+        border-radius: 8px;
+        img {
+          max-width: fill;
+          max-height: fixed;
+        }
+      }
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      margin: 40px 0px;
+      &__imagen {
+        width: 50%;
+        border: 1px solid var(--naranja-vivo);
+        border-radius: 8px;
+        img {
+          max-width: fill;
+          max-height: fixed;
+        }
+      }
+    }
+
     &__imagen {
-      width: 30%;
+      width: 40%;
       border: 1px solid var(--naranja-vivo);
       border-radius: 8px;
       img {
@@ -100,6 +138,30 @@
     top: 398px;
     left: 898px;
     transform: rotate(280deg);
+    @media (min-width: 1200px) {
+      position: absolute;
+      width: 150px;
+      height: 200px;
+      top: 458px;
+      left: 930px;
+      transform: rotate(280deg);
+    }
+    @media (max-width: 768px) {
+      position: absolute;
+      width: 94px;
+      height: 111px;
+      top: 798px;
+      left: 530px;
+      transform: rotate(280deg);
+    }
+    @media (max-width: 576px) {
+      position: absolute;
+      width: 64px;
+      height: 91px;
+      top: 398px;
+      left: 400px;
+      transform: rotate(280deg);
+    }
   }
   &__mancha {
     position: absolute;
