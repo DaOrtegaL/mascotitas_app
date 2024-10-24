@@ -1,21 +1,73 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: end;
-  width: 100%;
-  min-height: 100%;
-  padding: 24px;
+  @media (min-width: 576px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+  }
+  @media (min-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+  }
+  @media (min-width: 992px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+  }
+  @media (min-width: 1400px) {
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+  }
+
   &__titulo {
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
     color: var(--naranja-vivo);
-    width: 44%;
+    width: 100%;
     padding: 16px 0;
+    justify-content: center;
+    font-weight: bold;
+    @media (min-width: 1200px) {
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-end;
+      width: 100%;
+      min-height: 100%;
+      padding: 24px;
+      margin-inline-end: 280px;
+    }
   }
   &__informacion {
     padding: 24px;
     border: 3px solid var(--melocoton-suave);
     border-radius: 2%;
+    margin-right: 45px;
+    margin-left: 40px;
+
     a {
       color: var(--naranja-vivo);
     }
@@ -42,7 +94,7 @@
         input {
           border: 1px solid var(--marron-suave);
           margin: 8px 0;
-          width: 257px;
+          width: 100%;
           height: 38px;
           border-radius: 8px;
         }
@@ -56,40 +108,39 @@
       .lista {
         padding: 5px;
         border: 1px solid var(--marron-suave);
-        width: 519px;
+        width: 100%;
         height: 38px;
         border-radius: 8px;
         margin: 4px 0;
         color: var(--marron-suave);
+        outline: none;
 
         option {
-          width: 519px;
+          width: 100%;
           height: 40px;
           color: var(--marron-suave);
         }
       }
       .form-control {
         border: 1px solid var(--marron-suave);
-        width: 519px;
+        width: 100%;
         height: 38px;
         border-radius: 8px;
         margin: 4px 0;
-        ::placeholder {
-          color: var(--marron-suave);
-          opacity: 1;
-          text-align: start;
-          padding: 3px;
-        }
+        outline: none;
+        padding: 10px;
       }
     }
     &--sesion {
       .email {
         .form-control {
           border: 1px solid var(--marron-suave);
-          width: 519px;
+          width: 100%;
           height: 38px;
           margin: 4px 0;
           border-radius: 8px;
+          padding: 10px;
+          outline: none;
         }
         ::placeholder {
           color: var(--marron-suave);
@@ -101,10 +152,11 @@
       .contrasena {
         display: flex;
         flex-direction: row;
+        gap: 5px;
 
         .form-control {
           border: 1px solid var(--marron-suave);
-          width: 257px;
+          width: 100%;
           margin: 4px 0;
           height: 38px;
           border-radius: 8px;
@@ -119,24 +171,31 @@
           position: relative;
           display: flex;
           justify-content: space-between;
+          align-items: center;
           width: 100%;
           border: 1px solid var(--marron-suave);
-          width: 257px;
           padding: 4px 10px;
           height: 38px;
+          margin-top: 3px;
           border-radius: 8px;
           .contrasena-input {
             background-color: var(--blanco);
             border: none;
+            outline: none;
+            width: 100%;
+            color: var(--marron-suave);
           }
         }
         .toggle-password {
-          transform: translateY(-50%);
-          background-color: red;
+          height: 17px;
+          width: 21px;
+          align-self: center;
+          background-color: var(--blanco);
+          background-image: url(../../../public/images/icons/mostrar.svg);
+          background-size: cover;
           border: none;
           cursor: pointer;
           font-size: 14px;
-          color: #007bff;
         }
       }
       .checkbox {
@@ -165,7 +224,7 @@
           top: 0;
           width: 15px;
           height: 15px;
-          border: 2px solid var(--marron-suave);
+          border: 1px solid var(--marron-tierra);
           border-radius: 3px;
           background-color: #fff;
         }
@@ -173,15 +232,15 @@
         /* El icono del check cuando se selecciona */
         .form-check-input:checked + .form-check-label::before {
           background-color: var(--marron-tierra);
-          border-color: var(--marron-suave);
+          border-color: var(--marron-tierra);
         }
 
         /* Crear el "check" */
         .form-check-label::after {
           content: '';
           position: absolute;
-          left: 7px;
-          top: 4px;
+          left: 6px;
+          top: 3px;
           width: 4px;
           height: 7px;
           border: solid white;
@@ -207,10 +266,138 @@
         padding: 5px 32px;
         border-radius: 24px;
         cursor: pointer;
+        border: none;
         &:active {
           background-color: var(--marron-suave);
         }
       }
+    }
+  }
+  &__huella {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    transform: rotate(175deg);
+
+    @media (min-width: 576px) {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      transform: rotate(175deg);
+    }
+    @media (min-width: 768px) {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      transform: rotate(175deg);
+    }
+    @media (min-width: 992px) {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      transform: rotate(175deg);
+    }
+    @media (min-width: 1200px) {
+      width: 189px;
+      height: 215px;
+      position: absolute;
+      top: 110px;
+      left: 180px;
+      transform: rotate(175deg);
+    }
+  }
+  &__hueso {
+    width: 90px;
+    height: 98px;
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    @media (min-width: 576px) {
+      width: 160px;
+      height: 158px;
+      position: absolute;
+      top: 656px;
+      left: 420px;
+    }
+
+    @media (min-width: 768px) {
+      width: 170px;
+      height: 188px;
+      position: absolute;
+      top: 556px;
+      left: 603px;
+    }
+    @media (min-width: 992px) {
+      width: 170px;
+      height: 188px;
+      position: absolute;
+      top: 496px;
+      left: 823px;
+    }
+    @media (min-width: 1200px) {
+      width: 170px;
+      height: 188px;
+      position: absolute;
+      top: 426px;
+      left: 423px;
+    }
+  }
+  &__manchag {
+    width: 140px;
+    height: 188px;
+    position: absolute;
+    top: 426px;
+    left: -100px;
+
+    @media (min-width: 576px) {
+      width: 160px;
+      height: 188px;
+      position: absolute;
+      top: 426px;
+      left: -100px;
+    }
+    @media (min-width: 768px) {
+      width: 160px;
+      height: 188px;
+      position: absolute;
+      top: 426px;
+      left: -100px;
+    }
+    @media (min-width: 992px) {
+      width: 170px;
+      height: 188px;
+      position: absolute;
+      top: 426px;
+      left: -100px;
+    }
+    @media (min-width: 1200px) {
+      width: 170px;
+      height: 188px;
+      position: absolute;
+      top: 426px;
+      left: -100px;
+    }
+  }
+  &__manchab {
+    width: 42px;
+    height: 198px;
+    position: absolute;
+    top: 226px;
+    right: 0;
+    @media (min-width: 576px) {
+      width: 62px;
+      height: 198px;
+      position: absolute;
+      top: 226px;
+      right: 0;
     }
   }
 }
