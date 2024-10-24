@@ -1,4 +1,42 @@
 .home-page {
+  position: relative;
+
+  &__mancha-gris {
+    position: absolute;
+    left: 0;
+    top: 500px;
+  }
+
+  &__mancha-beige {
+    position: absolute;
+    right: 0;
+    top: 250px;
+  }
+
+  &__huella1 {
+    position: absolute;
+    right: 100px;
+    top: 700px;
+  }
+
+  &__huella2 {
+    position: absolute;
+    left: 120px;
+    top: 900px;
+  }
+
+  &__mancha-gris1 {
+    position: absolute;
+    right: 0;
+    top: 1050px;
+  }
+
+  &__mancha-beige1 {
+    position: absolute;
+    left: 0;
+    top: 1200px;
+  }
+
   &__carrusel {
     display: flex;
     flex-direction: column;

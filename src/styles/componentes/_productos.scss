@@ -15,6 +15,10 @@
       border: 1px var(--marron-tierra) solid;
       border-radius: 8px;
       padding: 17px 11px;
+      hr {
+        margin: 0;
+        color: var(--salmon-claro);
+      }
       .filtro_categoria {
         display: flex;
         flex-direction: row;
@@ -31,13 +35,112 @@
         }
       }
       .filtro_sub-categoria {
+        margin: 20px 0;
+        border: none;
+        .accordion {
+          border: none;
+          .accordion-item {
+            border: none;
+            .accordion-header {
+              border: none;
+              .accordion-button {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                background-color: var(--blanco);
+                color: var(--marron-tierra);
+                padding: 10px 10px;
+                border: none;
+                border-radius: 12px;
+                &:hover {
+                  background-color: var(--blanco-crema);
+                }
+                &::after {
+                  display: none !important;
+                }
+                &:focus {
+                  box-shadow: none;
+                }
+                &:active {
+                  background-color: var(--blanco);
+                }
+                .titulo-icon {
+                  display: flex;
+                  justify-content: center;
+                  font-size: 16px;
+                  font-weight: 600;
+                  gap: 5px;
+                }
+              }
+            }
+            .accordion-collapse {
+              .accordion-body {
+                padding: 0 10px;
+                .accordion-ul {
+                  padding: 0;
+                  width: 100%;
+                  .accordion-li {
+                    width: 100%;
+                    margin: 5px 0;
+
+                    label {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      width: 100%;
+                      color: var(--marron-tierra);
+                      &:hover {
+                        cursor: pointer;
+                      }
+                      .check-concentrado {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                      }
+                      .custom-check {
+                        width: 20px;
+                        height: 20px;
+                        background-color: var(--blanco);
+                        border: 1px solid var(--marron-tierra);
+                        border-radius: 4px;
+                        position: relative;
+                        transition:
+                          background-color 0.3s ease,
+                          border-color 0.3s ease;
+                        &::after {
+                          content: '';
+                          position: absolute;
+                          display: none;
+                          left: 7px;
+                          top: 2px;
+                          width: 6px;
+                          height: 12px;
+                          border: solid white;
+                          border-width: 0 2px 2px 0;
+                          transform: rotate(45deg);
+                        }
+                      }
+                      .check-concentrado:checked + .custom-check {
+                        background-color: var(--marron-tierra);
+                        border-color: var(--marron-tierra);
+                      }
+                      .check-concentrado:checked + .custom-check::after {
+                        display: block;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
     &--grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 14px;
+      width: 100%;
       .card {
         display: flex;
         flex-direction: column;
@@ -46,7 +149,7 @@
         padding: 9px 16px;
         border: 1px solid var(--salmon-claro);
         border-radius: 8px;
-        box-shadow: (0 4px 4px rgb(0 0 0 / 0.25));
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         max-width: 240px;
         &:hover {
           box-shadow: (0 4px 4px rgb(240, 90, 37));
