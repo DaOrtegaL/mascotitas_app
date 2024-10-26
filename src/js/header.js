@@ -311,7 +311,7 @@ p {
                     <li class="perro">Perros</li>
                     <div class="header__categoria--lista header__categoria--lista-perros">
                         <ul class="alimento">
-                            <h2>alimento</h2>
+                            <h2>Alimento</h2>
                             <li>
                                 <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -485,7 +485,7 @@ p {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <a href="">Ambientea</a>
+                                <a href="">Ambientes</a>
                             </li>
                         </ul>
                         <ul class="Salud">
@@ -550,7 +550,7 @@ p {
                     <li class="gato">Gatos</li>
                     <div class="header__categoria--lista header__categoria--lista-gatos">
                         <ul class="alimento">
-                            <h2>alimento</h2>
+                            <h2>Alimento</h2>
                             <li>
                                 <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -724,7 +724,7 @@ p {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <a href="">Ambientea</a>
+                                <a href="">Ambientes</a>
                             </li>
                         </ul>
                         <ul class="Salud">
