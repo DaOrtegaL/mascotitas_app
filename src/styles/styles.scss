@@ -28,7 +28,7 @@
 
 //Importar acá los componentes de Bootstrap
 @import '../../node_modules/bootstrap/scss/carousel';
-@import '../styles/componentes/descripcion-producto';
+//@import '../styles/componentes/descripcion-producto';
 @import '../../node_modules/bootstrap/scss/accordion';
 
 //Importar acá los componentes personalizados
@@ -46,3 +46,7 @@
 
 @import '../../node_modules/bootstrap/scss/carousel';
 @import '../styles/componentes/producto-detalle';
+
+/*--ESTILOS CARRITO DE COMPRA--*/
+
+@import './carrito-compra.scss';

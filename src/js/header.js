@@ -292,7 +292,7 @@ p {
       </style>
   
     <header class="header">
-        <a href="">
+        <a href="/">
             <picture class="header__logo">
                 <img src="/public/images/logoHeader.png" alt="logo header">
             </picture>
@@ -791,7 +791,7 @@ p {
             </nav>
     
             <div class="header__usuario">
-                <a href="#" class="header__usuario--carrito">
+                <a href="/carrito-compra" class="header__usuario--carrito">
                     <picture>
                         <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -801,7 +801,7 @@ p {
                     </picture>
                 </a>
     
-                <a href="#" class="header__usuario--ingreso">
+                <a href="/inicio-sesion" class="header__usuario--ingreso">
                     <p>Ingreso</p>
                 </a>
                 <a href="" class="header__usuario--registro">
