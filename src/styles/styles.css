@@ -2178,6 +2178,10 @@ progress {
   opacity: 0.25;
 }
 
+.home-page {
+  position: relative;
+}
+
 .carousel {
   position: relative;
 }
