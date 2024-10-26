@@ -20,6 +20,6 @@
             "precio": 90000,
             "cantidad": 1,
             "imagen": "../../public/images/productos/bravecto.png"
-          }
+        }
       ]    
 }

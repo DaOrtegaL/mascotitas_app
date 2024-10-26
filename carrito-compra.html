@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/styles/carrito-compra.css" />
+  </head>
+  <body>
+    <header-mascotitas></header-mascotitas>
+    <main class="carrito">
+      <section class="carrito__container">
+        <div class="carrito__lista">
+          <h2 class="carrito__lista--titulo">Carrito Compra</h2>
+          <ul class="carrito__lista--compra">
+            <!-- se crea lista de compra -->
+          </ul>
+        </div>
+        <form class="formulario-compra" action="/submit" method="POST">
+          <h2 class="formulario-compra__titulo">Finaliza tu compra</h2>
+
+          <div
+            class="formulario-compra__seccion formulario-compra__seccion--contacto"
+          >
+            <h3 class="formulario-compra__seccion-titulo">
+              Información de contacto
+            </h3>
+            <div class="formulario-compra__grupo c-nombre">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="nombre"
+                placeholder="Nombre *"
+                required
+              />
+            </div>
+            <div class="formulario-compra__grupo c-apellido">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="apellido"
+                placeholder="Apellido *"
+                required
+              />
+            </div>
+            <div class="formulario-compra__grupo c-contacto">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="contacto"
+                placeholder="Número de contacto *"
+                required
+              />
+            </div>
+            <div class="formulario-compra__grupo c-mail">
+              <input
+                class="formulario-compra__input"
+                type="email"
+                name="email"
+                placeholder="Correo electrónico *"
+                required
+              />
+            </div>
+            <div class="formulario-compra__grupo c-direccion">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="direccion"
+                placeholder="Dirección *"
+                required
+              />
+            </div>
+            <div class="formulario-compra__grupo c-informacion-adicional">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="informacion-adicional"
+                placeholder="Información adicional"
+              />
+            </div>
+          </div>
+
+          <div class="formulario-compra__grupo">
+            <input
+              type="checkbox"
+              id="misma-info"
+              class="formulario-compra__checkbox"
+              name="misma-info"
+            />
+            <label for="misma-info" class="formulario-compra__label">
+              La información de contacto y envío son la misma.
+            </label>
+          </div>
+
+          <div
+            class="formulario-compra__seccion formulario-compra__seccion--envio"
+          >
+            <h3 class="formulario-compra__seccion-titulo">Datos de envío</h3>
+            <div class="formulario-compra__grupo c-nombre-envio">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="envio-nombre"
+                placeholder="Nombre *"
+              />
+            </div>
+            <div class="formulario-compra__grupo c-apellido-envio">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="envio-apellido"
+                placeholder="Apellido *"
+              />
+            </div>
+            <div class="formulario-compra__grupo c-direccion-envio">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="envio-direccion"
+                placeholder="Dirección *"
+              />
+            </div>
+            <div class="formulario-compra__grupo c-informacion-adicional-envio">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="envio-info-adicional"
+                placeholder="Información adicional"
+              />
+            </div>
+          </div>
+
+          <div
+            class="formulario-compra__seccion formulario-compra__seccion--facturacion"
+          >
+            <h3 class="formulario-compra__seccion-titulo">
+              Información de facturación
+            </h3>
+            <div class="formulario-compra__grupo">
+              <select class="formulario-compra__select" name="facturacion-tipo">
+                <option value="natural">
+                  Persona Natural - No responsable del IVA
+                </option>
+              </select>
+            </div>
+            <div class="formulario-compra__grupo">
+              <select
+                class="formulario-compra__select"
+                name="tipo-contribuyente"
+              >
+                <option value="">Tipo de contribuyente</option>
+              </select>
+            </div>
+            <div class="formulario-compra__grupo">
+              <input
+                class="formulario-compra__input"
+                type="text"
+                name="documento"
+                placeholder="No. de documento de identidad *"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="formulario-compra__grupo">
+            <input
+              type="checkbox"
+              id="mayor-18"
+              class="formulario-compra__checkbox"
+              name="mayor-18"
+              required
+            />
+            <label for="mayor-18" class="formulario-compra__label"
+              >Soy mayor de 18 años.</label
+            >
+          </div>
+
+          <div class="formulario-compra__grupo">
+            <input
+              type="checkbox"
+              id="terminos"
+              class="formulario-compra__checkbox"
+              name="terminos"
+              required
+            />
+            <label for="terminos" class="formulario-compra__label"
+              >Acepto términos y condiciones. *</label
+            >
+          </div>
+
+          <button type="submit" class="formulario-compra__boton">
+            Siguiente
+          </button>
+        </form>
+      </section>
+      <section class="carrito__total">
+        <div class="carrito__total--contenedor">
+          <h2 class="carrito__total--titulo">Resumen del pedido</h2>
+          <div class="carrito__total--card">
+            <div class="carrito__total--productos carrito__total--item">
+              <p class="card-lateral-izquierda">3 productos</p>
+              <p class="card-lateral-derecha">$ 840.000</p>
+            </div>
+            <div class="carrito__total--envio carrito__total--item">
+              <p class="card-lateral-izquierda">Envio</p>
+              <p class="card-lateral-derecha">Gratis</p>
+            </div>
+            <div class="carrito__total--total carrito__total--item">
+              <p class="card-lateral-izquierda">Total</p>
+              <p class="card-lateral-derecha">$840.000</p>
+            </div>
+            <button class="carrito__total--button" id="continuarPago">
+              Continuar al pago
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer-mascotitas></footer-mascotitas>
+    <script type="module" src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+    <script src="/src/js/carrito_compra.js"></script>
+  </body>
+</html>

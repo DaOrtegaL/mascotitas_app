@@ -7,11 +7,6 @@
   --negro: #000000;
   --melocoton-suave: #ffe7da;
   --marron-suave: #c7a38e;
-  --sm: 576px;
-  --md: 768px;
-  --lg: 992px;
-  --xl: 1200px;
-  --xxl: 1400px;
 }
 
 * {
@@ -30,6 +25,12 @@ a {
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+@custom-media --xs (max-width: 576px); 
+@custom-media --sm (max-width: 768px);   
+@custom-media --md (max-width: 992px);    
+@custom-media --lg (max-width: 1200px);    
+@custom-media --xl (max-width: 1400px); 
 
 h1 {
   font-weight: 700; /* bold */

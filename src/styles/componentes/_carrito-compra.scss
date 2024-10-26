@@ -9,6 +9,9 @@
   &__lista {
     display: flex;
     flex-direction: column;
+    &.close_carrito {
+      display: none;
+    }
 
     &--titulo {
       color: #f05a25;
@@ -162,6 +165,148 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+    }
+  }
+}
+
+.formulario-compra {
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #0000001a;
+  width: 100%;
+  display: none;
+  max-width: 570px;
+
+  &.open_formulario {
+    display: block;
+  }
+
+  &__titulo {
+    color: #ff6633;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  &__seccion {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 10px;
+    &.formulario-compra__seccion--envio.close {
+      display: none;
+      & ~ .formulario-compra__seccion--facturacion {
+        .formulario-compra__seccion-titulo {
+          &:before {
+            content: '2';
+          }
+        }
+      }
+    }
+
+    &-titulo {
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: #000;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      &:before {
+        content: '1';
+        background-color: #c7a38e;
+        color: white;
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__seccion--envio &__seccion-titulo:before {
+    content: '2';
+  }
+
+  &__seccion--facturacion &__seccion-titulo:before {
+    content: '3';
+  }
+
+  &__grupo {
+    margin-bottom: 15px;
+    width: 100%;
+
+    &.c-nombre,
+    &.c-apellido {
+      width: calc(50% - 5px);
+      &-envio {
+        width: calc(50% - 5px);
+      }
+    }
+    &.c-contacto {
+      width: calc(30% - 5px);
+    }
+    &.c-mail {
+      width: calc(70% - 5px);
+    }
+
+    & input,
+    & select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #c7a38e;
+      border-radius: 5px;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #c7a38e;
+      }
+    }
+
+    & input[type='checkbox'] {
+      width: auto;
+    }
+  }
+
+  &__input {
+    padding: 10px;
+    border: 1px solid #c7a38e;
+    border-radius: 5px;
+  }
+
+  &__checkbox {
+    width: auto;
+  }
+
+  &__label {
+    margin-left: 8px;
+  }
+
+  &__select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  &__boton {
+    background-color: #d38d5f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #c17c4e;
     }
   }
 }

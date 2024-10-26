@@ -94,3 +94,21 @@ document.addEventListener('click', function (event) {
 
 // Llamar a la función para obtener los datos
 getData();
+
+document.getElementById('continuarPago').addEventListener('click', function () {
+  document.querySelector('.formulario-compra').classList.add('open_formulario');
+  document.querySelector('.carrito__lista').classList.add('close_carrito');
+});
+
+const checkboxEnvio = document.getElementById('misma-info');
+const seccionEnvio = document.querySelector(
+  '.formulario-compra__seccion--envio',
+);
+
+checkboxEnvio.addEventListener('change', function () {
+  if (checkboxEnvio.checked) {
+    seccionEnvio.classList.add('close'); // Oculta la sección de envío
+  } else {
+    seccionEnvio.classList.remove('close'); // Muestra la sección de envío
+  }
+});
