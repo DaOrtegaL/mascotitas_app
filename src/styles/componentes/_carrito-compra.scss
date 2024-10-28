@@ -310,3 +310,11 @@
     }
   }
 }
+#continuarPago {
+  &.close {
+    display: none;
+  }
+}
+#finalizarPago {
+  display: none;
+}
