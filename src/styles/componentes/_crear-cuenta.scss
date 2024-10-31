@@ -69,7 +69,6 @@
   }
 
   &__informacion {
-
     padding: 24px;
     border: 3px solid var(--melocoton-suave);
     border-radius: 2%;
@@ -173,11 +172,10 @@
         gap: 5px;
 
         /* Ocultar el ícono de visibilidad de contraseña en navegadores basados en WebKit (Chrome, Safari, Edge) */
-        input[type="password"]::-ms-reveal,
-        input[type="password"]::-webkit-textfield-decoration-container {
+        input[type='password']::-ms-reveal,
+        input[type='password']::-webkit-textfield-decoration-container {
           display: none;
         }
-
 
         .form-control {
           border: 1px solid var(--marron-suave);
@@ -261,7 +259,7 @@
         }
 
         /* El icono del check cuando se selecciona */
-        .form-check-input:checked+.form-check-label::before {
+        .form-check-input:checked + .form-check-label::before {
           background-color: var(--marron-tierra);
           border-color: var(--marron-tierra);
         }
@@ -281,7 +279,7 @@
         }
 
         /* Mostrar el "check" solo cuando esté seleccionado */
-        .form-check-input:checked+.form-check-label::after {
+        .form-check-input:checked + .form-check-label::after {
           opacity: 1;
         }
       }
@@ -353,7 +351,6 @@
   }
 
   &__hueso--cuenta {
-    
     width: 90px;
     height: 98px;
     position: absolute;

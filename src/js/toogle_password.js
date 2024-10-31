@@ -3,7 +3,8 @@ const passwordInput2 = document.getElementById('inputConfirmPassword');
 
 togglePassword2.addEventListener('click', function () {
   // Alternar el tipo de input entre 'password' y 'text'
-  const type = passwordInput2.getAttribute('type') === 'password' ? 'text' : 'password';
+  const type =
+    passwordInput2.getAttribute('type') === 'password' ? 'text' : 'password';
   passwordInput2.setAttribute('type', type);
 
   // Cambiar la imagen del icono según el tipo de input
@@ -21,7 +22,8 @@ const passwordInput = document.getElementById('inputPassword');
 
 togglePassword.addEventListener('click', function () {
   // Alternar el tipo de input entre 'password' y 'text'
-  const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+  const type =
+    passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
   passwordInput.setAttribute('type', type);
 
   // Cambiar la imagen del icono según el tipo de input

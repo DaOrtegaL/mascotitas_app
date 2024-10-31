@@ -26,11 +26,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-@custom-media --xs (max-width: 576px); 
-@custom-media --sm (max-width: 768px);   
-@custom-media --md (max-width: 992px);    
-@custom-media --lg (max-width: 1200px);    
-@custom-media --xl (max-width: 1400px); 
+@custom-media --xs (max-width: 576px);
+@custom-media --sm (max-width: 768px);
+@custom-media --md (max-width: 992px);
+@custom-media --lg (max-width: 1200px);
+@custom-media --xl (max-width: 1400px);
 
 h1 {
   font-weight: 700; /* bold */
