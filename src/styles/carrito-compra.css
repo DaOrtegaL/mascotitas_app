@@ -66,6 +66,9 @@ p {
   display: flex;
   flex-direction: column;
 }
+.carrito__lista.close_carrito {
+  display: none;
+}
 .carrito__lista--titulo {
   color: #f05a25;
   font-weight: 700;
@@ -204,4 +207,126 @@ p {
   background: url("../../../public/images/flecha.svg");
   background-size: cover;
   background-repeat: no-repeat;
-}/*# sourceMappingURL=carrito-compra.css.map */
+}
+
+.formulario-compra {
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1019607843);
+  width: 100%;
+  display: none;
+  max-width: 570px;
+}
+.formulario-compra.open_formulario {
+  display: block;
+}
+.formulario-compra__titulo {
+  color: #ff6633;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.formulario-compra__seccion {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.formulario-compra__seccion.formulario-compra__seccion--envio.close {
+  display: none;
+}
+.formulario-compra__seccion.formulario-compra__seccion--envio.close ~ .formulario-compra__seccion--facturacion .formulario-compra__seccion-titulo:before {
+  content: "2";
+}
+.formulario-compra__seccion-titulo {
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.formulario-compra__seccion-titulo:before {
+  content: "1";
+  background-color: #c7a38e;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.formulario-compra__seccion--envio .formulario-compra__seccion-titulo:before {
+  content: "2";
+}
+.formulario-compra__seccion--facturacion .formulario-compra__seccion-titulo:before {
+  content: "3";
+}
+.formulario-compra__grupo {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.formulario-compra__grupo.c-nombre, .formulario-compra__grupo.c-apellido {
+  width: calc(50% - 5px);
+}
+.formulario-compra__grupo.c-nombre-envio, .formulario-compra__grupo.c-apellido-envio {
+  width: calc(50% - 5px);
+}
+.formulario-compra__grupo.c-contacto {
+  width: calc(30% - 5px);
+}
+.formulario-compra__grupo.c-mail {
+  width: calc(70% - 5px);
+}
+.formulario-compra__grupo input, .formulario-compra__grupo select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c7a38e;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.formulario-compra__grupo input::-moz-placeholder, .formulario-compra__grupo select::-moz-placeholder {
+  color: #c7a38e;
+}
+.formulario-compra__grupo input::placeholder, .formulario-compra__grupo select::placeholder {
+  color: #c7a38e;
+}
+.formulario-compra__grupo input[type=checkbox] {
+  width: auto;
+}
+.formulario-compra__input {
+  padding: 10px;
+  border: 1px solid #c7a38e;
+  border-radius: 5px;
+}
+.formulario-compra__checkbox {
+  width: auto;
+}
+.formulario-compra__label {
+  margin-left: 8px;
+}
+.formulario-compra__select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.formulario-compra__boton {
+  background-color: #d38d5f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.formulario-compra__boton:hover {
+  background-color: #c17c4e;
+}
