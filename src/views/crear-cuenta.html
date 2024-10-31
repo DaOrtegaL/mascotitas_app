@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <!-- <header-mascotitas></header-mascotitas> -->
+    <header-mascotitas></header-mascotitas>
     <main class="main">
       <div class="main__titulo">
         <h2>Crea tu nueva cuenta</h2>
@@ -86,11 +86,7 @@
                 class="contrasena-input"
                 placeholder="Contraseña"
               />
-              <!-- <button
-                type="button"
-                class="toggle-password"
-                onclick="togglePassword('inputPassword')"
-              ></button> -->
+              <img id="eyeIcon" src="../../public/images/icons/mostrar.svg" alt="Mostrar contraseña" class="toggle-password">
             </div>
             <div class="password-wrapper">
               <input
@@ -99,11 +95,7 @@
                 class="contrasena-input"
                 placeholder="Confirmar contraseña"
               />
-              <!-- <button
-                type="button"
-                class="toggle-password"
-                onclick="togglePassword('inputConfirmPassword')">
-              </button> -->
+              <img id="eyeIcon_2" src="../../public/images/icons/mostrar.svg" alt="Mostrar contraseña" class="toggle-password">
             </div>
           </div>
           <div class="checkbox">
@@ -123,9 +115,9 @@
       <img
         src="/public/images/huella-1 1.png"
         alt="Huella"
-        class="main__huella"
+        class="main__huella--cuenta"
       />
-      <img src="/public/images/hueso.png" alt="Hueso" class="main__hueso" />
+      <img src="/public/images/hueso.png" alt="Hueso" class="main__hueso--cuenta" />
       <img
         src="/public/images/media-mancha-beige.png"
         alt="Mancha Beige"
@@ -137,8 +129,9 @@
         class="main__manchag"
       />
     </main>
-    <!-- <footer-mascotitas></footer-mascotitas>
+    <footer-mascotitas></footer-mascotitas>
     <script type="module" src="/src/js/footer.js"></script>
-    <script type="module" src="/src/js/header.js"></script> -->
+    <script type="module" src="/src/js/header.js"></script>
+    <script type="module" src="/src/js/toogle_password.js"></script>
   </body>
 </html>
