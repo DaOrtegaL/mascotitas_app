@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         750: {
           items: 2,
         },
-        // eslint-disable-next-line no-dupe-keys
+
         900: {
           items: 3,
         },
