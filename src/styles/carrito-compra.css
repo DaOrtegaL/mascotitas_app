@@ -63,6 +63,12 @@ p {
   margin: 10px 20px;
   justify-content: space-around;
 }
+@media (max-width: 900px) {
+  .carrito {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 .carrito__lista {
   display: flex;
   flex-direction: column;
@@ -340,6 +346,11 @@ p {
   display: none;
 }
 
+#products-section {
+  overflow: hidden;
+  padding: 30px 0;
+}
+
 .carousel--products {
   display: flex;
   flex-direction: row;
@@ -356,6 +367,7 @@ p {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 240px;
   min-width: 250px;
+  margin: auto;
 }
 .carousel--products .card:hover {
   box-shadow: 0 4px 4px rgb(240, 90, 37);
@@ -416,11 +428,17 @@ p {
   cursor: pointer;
 }
 
+@media (min-width: 900px) {
+  #products-container-mw {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
 #products-container-ow {
-  width: 100%;
+  margin: 30px 0;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 #products-container-ow button[data-action=stop] {
   display: none;
@@ -432,12 +450,40 @@ p {
   display: none;
 }
 
-#products-container-mw {
-  max-width: 800px;
-  overflow: hidden;
-  margin: 50px auto;
-}
-
 .tns-controls {
   position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 0;
+  width: 100%;
+}
+.tns-controls button {
+  position: absolute;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #593d2d;
+  background-color: #fff;
+}
+.tns-controls button::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-right: 2px solid #593d2d;
+  border-bottom: 2px solid #593d2d;
+}
+.tns-controls button[data-controls=next] {
+  right: 30px;
+}
+.tns-controls button[data-controls=next]::before {
+  transform: rotate(-43deg);
+}
+.tns-controls button[data-controls=prev] {
+  left: 30px;
+}
+.tns-controls button[data-controls=prev]::before {
+  transform: rotate(133deg);
+  margin-left: 6px;
 }

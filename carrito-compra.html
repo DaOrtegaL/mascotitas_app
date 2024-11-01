@@ -8,7 +8,8 @@
   </head>
   <body>
     <header-mascotitas></header-mascotitas>
-    <main class="carrito">
+    <main>
+    <section class="carrito">
       <section class="carrito__container">
         <div class="carrito__lista">
           <h2 class="carrito__lista--titulo">Carrito Compra</h2>
@@ -228,11 +229,14 @@
           </div>
         </div>
       </section>
+    </section>
     </main>
-    <div id="products-container" class="carousel carousel--products">
-      <!-- Aquí se cargarán dinámicamente las tarjetas de productos -->
-    </div>
-
+    <section id="products-section">
+      <h2 class="carousel__title">Productos Recomendados</h2>
+      <div id="products-container" class="carousel carousel--products">
+        <!-- Aquí se cargarán dinámicamente las tarjetas de productos -->
+      </div>
+    </section>
     <footer-mascotitas></footer-mascotitas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script src="src/js/carrselProdctosV2.js"></script>

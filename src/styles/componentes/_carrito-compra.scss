@@ -6,6 +6,11 @@
   margin: 10px 20px;
   justify-content: space-around;
 
+ @media (max-width: 900px) {
+  flex-direction: column-reverse;
+  align-items: center;
+ }
+
   &__lista {
     display: flex;
     flex-direction: column;

@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   let productos = [];
 
   async function getData() {
-    const url = '/src/js/json/productos-recomendados.json'; // Asegúrate de que esta ruta sea correcta
+    const url = '/src/js/json/productos-recomendados.json'; // Ruta correcta
     try {
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
       const data = await response.json();
-      productos = data['productos-recomendados']; // Cambiado para acceder a la propiedad correcta
+      productos = data['productos-recomendados'];
       renderProductos();
     } catch (error) {
       console.error('Error fetching data:', error.message);
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function renderProductos() {
-    productsContainer.innerHTML = ''; // Limpia el contenedor antes de renderizar
+    productsContainer.innerHTML = '';
     productos.forEach((producto) => {
       const productCard = `
               <div class="carousel__slide">
@@ -43,24 +43,29 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
       productsContainer.innerHTML += productCard; // Agrega cada tarjeta de producto al contenedor
     });
-
-    initCarousel(); // Inicializa el carrusel después de cargar los productos
+    initCarousel();
   }
 
   function initCarousel() {
     // eslint-disable-next-line no-undef, no-unused-vars
     const slider = tns({
       container: '#products-container',
-      items: 3,
-      slideBy: 'page',
-      loop: false,
-      controls: false,
-      nav: false,
-      // eslint-disable-next-line no-dupe-keys
+      items: 1,
+      loop: true,
+      autoplay: true,
       controls: true,
+      nav: false,
+      responsive: {
+        750: {
+          items: 2,
+        },
+        // eslint-disable-next-line no-dupe-keys
+        900: {
+          items: 3,
+        },
+      },
     });
   }
 
-  // Llamar a la función para obtener los datos
   getData();
 });
