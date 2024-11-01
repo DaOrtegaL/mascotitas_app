@@ -8,7 +8,8 @@
   </head>
   <body>
     <header-mascotitas></header-mascotitas>
-    <main class="carrito">
+    <main>
+    <section class="carrito">
       <section class="carrito__container">
         <div class="carrito__lista">
           <h2 class="carrito__lista--titulo">Carrito Compra</h2>
@@ -102,6 +103,7 @@
                 type="text"
                 name="envio-nombre"
                 placeholder="Nombre *"
+                required
               />
             </div>
             <div class="formulario-compra__grupo c-apellido-envio">
@@ -110,6 +112,7 @@
                 type="text"
                 name="envio-apellido"
                 placeholder="Apellido *"
+                required
               />
             </div>
             <div class="formulario-compra__grupo c-direccion-envio">
@@ -118,6 +121,7 @@
                 type="text"
                 name="envio-direccion"
                 placeholder="Dirección *"
+                required
               />
             </div>
             <div class="formulario-compra__grupo c-informacion-adicional-envio">
@@ -126,6 +130,7 @@
                 type="text"
                 name="envio-info-adicional"
                 placeholder="Información adicional"
+                required
               />
             </div>
           </div>
@@ -141,14 +146,20 @@
                 <option value="natural">
                   Persona Natural - No responsable del IVA
                 </option>
+                <option value="natural">
+                  Persona Natural - No responsable del IVA
+                </option>
               </select>
             </div>
             <div class="formulario-compra__grupo">
               <select
                 class="formulario-compra__select"
                 name="tipo-contribuyente"
+                required
               >
                 <option value="">Tipo de contribuyente</option>
+                <option value="cedula-ciudadania">Cedla de ciudadania</option>
+                <option value="tarjeta-identidad">Tarjeta de identidad</option>
               </select>
             </div>
             <div class="formulario-compra__grupo">
@@ -184,7 +195,7 @@
               required
             />
             <label for="terminos" class="formulario-compra__label"
-              >Acepto términos y condiciones. *</label
+            required>Acepto términos y condiciones. *</label
             >
           </div>
 
@@ -212,11 +223,23 @@
             <button class="carrito__total--button" id="continuarPago">
               Continuar al pago
             </button>
+            <button class="carrito__total--button" id="finalizarPago">
+              Continuar al pago
+            </button>
           </div>
         </div>
       </section>
+    </section>
     </main>
+    <section id="products-section">
+      <h2 class="carousel__title">Productos Recomendados</h2>
+      <div id="products-container" class="carousel carousel--products">
+        <!-- Aquí se cargarán dinámicamente las tarjetas de productos -->
+      </div>
+    </section>
     <footer-mascotitas></footer-mascotitas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="src/js/carrselProdctosV2.js"></script>
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/header.js"></script>
     <script src="/src/js/carrito_compra.js"></script>
