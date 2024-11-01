@@ -3570,7 +3570,7 @@ p {
     width: 100%;
     min-height: 100%;
     padding: 24px;
-    margin-inline-end: 280px;
+    margin-inline-end: 240px;
   }
 }
 .main__informacion {
@@ -3668,6 +3668,11 @@ p {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  /* Ocultar el ícono de visibilidad de contraseña en navegadores basados en WebKit (Chrome, Safari, Edge) */
+}
+.main__informacion--sesion .contrasena input[type=password]::-ms-reveal,
+.main__informacion--sesion .contrasena input[type=password]::-webkit-textfield-decoration-container {
+  display: none;
 }
 .main__informacion--sesion .contrasena .form-control {
   border: 1px solid var(--marron-suave);
@@ -3788,16 +3793,16 @@ p {
 .main__informacion--sesion .boton:active {
   background-color: var(--marron-suave);
 }
-.main__huella {
+.main__huella--cuenta {
   width: 80px;
   height: 80px;
   position: absolute;
-  top: 30px;
-  left: 10px;
+  top: 18px;
+  left: 0px;
   transform: rotate(175deg);
 }
 @media (min-width: 576px) {
-  .main__huella {
+  .main__huella--cuenta {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -3807,7 +3812,7 @@ p {
   }
 }
 @media (min-width: 768px) {
-  .main__huella {
+  .main__huella--cuenta {
     width: 150px;
     height: 150px;
     position: absolute;
@@ -3817,7 +3822,7 @@ p {
   }
 }
 @media (min-width: 992px) {
-  .main__huella {
+  .main__huella--cuenta {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -3827,7 +3832,7 @@ p {
   }
 }
 @media (min-width: 1200px) {
-  .main__huella {
+  .main__huella--cuenta {
     width: 189px;
     height: 215px;
     position: absolute;
@@ -3836,7 +3841,7 @@ p {
     transform: rotate(175deg);
   }
 }
-.main__hueso {
+.main__hueso--cuenta {
   width: 90px;
   height: 98px;
   position: absolute;
@@ -3844,7 +3849,7 @@ p {
   left: 70%;
 }
 @media (min-width: 576px) {
-  .main__hueso {
+  .main__hueso--cuenta {
     width: 160px;
     height: 158px;
     position: absolute;
@@ -3853,7 +3858,7 @@ p {
   }
 }
 @media (min-width: 768px) {
-  .main__hueso {
+  .main__hueso--cuenta {
     width: 170px;
     height: 188px;
     position: absolute;
@@ -3862,7 +3867,7 @@ p {
   }
 }
 @media (min-width: 992px) {
-  .main__hueso {
+  .main__hueso--cuenta {
     width: 170px;
     height: 188px;
     position: absolute;
@@ -3871,7 +3876,7 @@ p {
   }
 }
 @media (min-width: 1200px) {
-  .main__hueso {
+  .main__hueso--cuenta {
     width: 170px;
     height: 188px;
     position: absolute;
