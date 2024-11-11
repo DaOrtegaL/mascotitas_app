@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const formulario = document.getElementById("formularioCompra");
+const formulario = document.getElementById('formularioCompra');
 
-formulario.addEventListener("submit", function (event) {
+formulario.addEventListener('submit', function (event) {
   event.preventDefault(); // Evita el envío por defecto
 });

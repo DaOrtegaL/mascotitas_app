@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const productsContainer = document.getElementById('products-container');
-  
+
   if (!productsContainer) {
-    console.error("El contenedor de productos no se encontró en el DOM.");
+    console.error('El contenedor de productos no se encontró en el DOM.');
     return; // Salimos si no se encuentra el contenedor
   }
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderProductos();
         initCarousel(); // Iniciamos el carrusel después de renderizar
       } else {
-        console.error("No se encontraron productos en la respuesta de la API.");
+        console.error('No se encontraron productos en la respuesta de la API.');
       }
     } catch (error) {
       console.error('Error fetching data:', error.message);
@@ -52,13 +52,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </div>
         </div>`;
-      
+
       productsContainer.innerHTML += productCard;
     });
   }
 
   function initCarousel() {
-    if (typeof tns === "function") {
+    if (typeof tns === 'function') {
+      // eslint-disable-next-line no-undef
       tns({
         container: '#products-container',
         items: 1,
@@ -73,7 +74,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         },
       });
     } else {
-      console.error("La función `tns` no está definida. Asegúrate de que tiny-slider esté correctamente incluido.");
+      console.error(
+        'La función `tns` no está definida. Asegúrate de que tiny-slider esté correctamente incluido.',
+      );
     }
   }
 
