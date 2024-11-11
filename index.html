@@ -89,17 +89,18 @@
           <a href=""><button class="informacion"> Más información </button></a>
         </div>
       </div>
-      <div class="home-page__titulo">
-        <h2>Productos más vendidos</h2>
-      </div>
-      <div id="products-container" class="home-page__container-grid">
-        <!-- Aqui van a estar las tarjetas de los productos -->
-      </div>
     </div>
+    <section id="products-section">
+      <h2 class="carousel__title">Productos Recomendados</h2>
+      <div id="products-container" class="carousel carousel--products">
+        <!-- Aquí se cargarán dinámicamente las tarjetas de productos -->
+      </div>
+    </section>
     <footer-mascotitas></footer-mascotitas>
-    <script type="module" src="/src/js/productos_mas_vendidos.js"></script>
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/header.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="src/js/carrselProdctosV2.js"></script>
 </body>
 
 </html>

@@ -804,7 +804,7 @@ p {
                 <a href="/inicio-sesion" class="header__usuario--ingreso">
                     <p>Ingreso</p>
                 </a>
-                <a href="" class="header__usuario--registro">
+                <a href="/crear-cuenta" class="header__usuario--registro">
                     <p>Registrarse</p>
                 </a>
             </div>
