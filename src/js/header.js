@@ -21,7 +21,7 @@ class Header extends HTMLElement {
   top: 0;
   align-items: center;
   padding: 0 15px;
-  z-index: 2;
+  z-index: 5;
   border-bottom: 1px solid #FFE7DA;
 }
 .header__logo {
@@ -804,7 +804,7 @@ p {
                 <a href="/inicio-sesion" class="header__usuario--ingreso">
                     <p>Ingreso</p>
                 </a>
-                <a href="" class="header__usuario--registro">
+                <a href="/crear-cuenta" class="header__usuario--registro">
                     <p>Registrarse</p>
                 </a>
             </div>

@@ -435,6 +435,11 @@ p {
     overflow: hidden;
   }
 }
+@media (min-width: 1190px) {
+  #products-container-mw {
+    max-width: 1060px;
+  }
+}
 
 #products-container-ow {
   margin: 30px 0;
@@ -463,16 +468,17 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  border: 2px solid #593d2d;
+  border: 2px solid #f05a25;
   background-color: #fff;
+  cursor: pointer;
 }
 .tns-controls button::before {
   content: "";
   width: 15px;
   height: 15px;
   display: block;
-  border-right: 2px solid #593d2d;
-  border-bottom: 2px solid #593d2d;
+  border-right: 2px solid #f05a25;
+  border-bottom: 2px solid #f05a25;
 }
 .tns-controls button[data-controls=next] {
   right: 30px;
@@ -486,4 +492,13 @@ p {
 .tns-controls button[data-controls=prev]::before {
   transform: rotate(133deg);
   margin-left: 6px;
+}
+
+.carousel__title {
+  text-align: center;
+  color: #f05a25;
+  padding-top: 7px;
+  border-top: 1px solid #f05a25;
+  width: 90%;
+  margin: 0 auto;
 }
