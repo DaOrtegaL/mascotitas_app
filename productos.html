@@ -9,6 +9,7 @@
   </head>
   <body>
     <header-mascotitas></header-mascotitas>
+    <header-login-user></header-login-user>
     <main class="productos">
       <div class="productos__container">
         <div class="productos__container--filtro">
@@ -422,7 +423,18 @@
       <div id="pagination-container" class="productos__pagination"></div>
     </main>
     <footer-mascotitas></footer-mascotitas>
-    <script type="module" src="/src/js/header.js"></script>
+    <script>
+      // Verifica si el usuario está logueado comprobando la existencia de un token en localStorage
+      const isLoggedIn = localStorage.getItem('authToken') !== null;
+  
+      // Carga el script correspondiente según si está logueado o no
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = isLoggedIn 
+        ? '/src/js/header-usuario-logueado.js' 
+        : '/src/js/header.js';
+      document.head.appendChild(script);
+    </script>
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/productos.js"></script>
     <!-- <script type="module" src="/node_modules/bootstrap/js/index.esm.js"></script> -->
