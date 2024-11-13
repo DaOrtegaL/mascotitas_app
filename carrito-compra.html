@@ -8,6 +8,7 @@
   </head>
   <body>
     <header-mascotitas></header-mascotitas>
+    <header-login-user></header-login-user>
     <main>
     <section class="carrito">
       <section class="carrito__container">
@@ -238,10 +239,21 @@
       </div>
     </section>
     <footer-mascotitas></footer-mascotitas>
+    <script>
+      // Verifica si el usuario está logueado comprobando la existencia de un token en localStorage
+      const isLoggedIn = localStorage.getItem('authToken') !== null;
+  
+      // Carga el script correspondiente según si está logueado o no
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = isLoggedIn 
+        ? '/src/js/header-usuario-logueado.js' 
+        : '/src/js/header.js';
+      document.head.appendChild(script);
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script src="src/js/carrselProdctosV2.js"></script>
     <script type="module" src="/src/js/footer.js"></script>
-    <script type="module" src="/src/js/header.js"></script>
     <script src="/src/js/carrito_compra.js"></script>
   </body>
 </html>
