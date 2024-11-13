@@ -42,7 +42,7 @@
       />
       <div class="main__incio-sesion">
         <h2 class="main__incio-sesion--encabezado">Iniciar sesión</h2>
-        <div class="main__incio-sesion--contenedor">
+        <form class="main__incio-sesion--contenedor" id="login">
           <!-- Primer texto para "Crear cuenta" -->
           <div class="titulo">
             <p class="parrafo">
@@ -56,9 +56,10 @@
             >
             <input
               type="email"
-              id="form2Example1"
+              id="email-login"
               class="form-control"
               placeholder="Correo electrónico *"
+              required
             />
           </div>
           <!-- Segunda Cajita -->
@@ -66,10 +67,11 @@
             <label class="form-label" for="form2Example1">Contraseña</label>
             <div class="form-control">
               <input
-                type="email"
-                id="form2Example1"
+                type="password"
+                id="password-login"
                 class="password"
                 placeholder="Contraseña*"
+                required
               />
               <img
                 src="/public/images/icono_esconder_clave.svg"
@@ -82,26 +84,22 @@
           <div class="contrasena">
             <p><a href="#!">¿Olvidaste tu contraseña?</a></p>
           </div>
-          <!-- terminos y condiciones -->
-          <label>
-            <input type="checkbox" required />
-            Acepto términos y condiciones. *
-          </label>
           <!-- Ingresar button -->
           <button
-            type="button"
+            type="submit"
             data-mdb-button-init
             data-mdb-ripple-init
             class="incio-sesion__contenedor--boton"
           >
             Ingresar
           </button>
-        </div>
+        </form>
       </div>
     </main>
 
     <footer-mascotitas></footer-mascotitas>
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/header.js"></script>
+    <script type="module" src="/src//js/inicio-sesion.js"></script>
   </body>
 </html>

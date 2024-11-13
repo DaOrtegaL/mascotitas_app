@@ -13,27 +13,29 @@
       <div class="main__titulo">
         <h2>Crea tu nueva cuenta</h2>
       </div>
-      <div class="main__informacion">
+      <form class="main__informacion" id="registro">
         <p>¿Ya tienes una cuenta con nosotros? <a href="/inicio-sesion">Ingresa aquí</a></p>
 
         <p class="seccion"><span>1</span> Información personal</p>
 
-        <form class="main__informacion--personal">
+        <div class="main__informacion--personal">
           <div class="nombres">
             <input
               type="text"
               class="form-control"
               id="nombre"
-              placeholder="Nombre *"
+              placeholder="Nombre"
+              required
             />
             <input
               type="text"
               class="form-control"
               id="apellido"
-              placeholder="Apellido *"
+              placeholder="Apellido"
+              required
             />
           </div>
-          <select class="lista" aria-label="Default select example">
+          <select class="lista" aria-label="Default select example"  id="tipoContribuyente">
             <option selected>Tipo de contribuyente</option>
             <option value="1">Cédula de ciudadanía</option>
             <option value="2">Cédula de extrangería</option>
@@ -47,6 +49,7 @@
               class="form-control"
               id="numero-documento"
               placeholder="No. de documento de identidad"
+              required
             />
           </div>
           <div class="direccion">
@@ -54,28 +57,29 @@
               type="text"
               class="form-control"
               id="inputAddress2"
-              placeholder="Direccion *"
+              placeholder="Direccion"
             />
           </div>
           <div class="info-adicional">
             <input
               type="text"
               class="form-control"
-              id="Informacion adicional"
+              id="Informacion-adicional"
               placeholder="Informacion adicional"
             />
           </div>
-        </form>
+        </div>
 
         <p class="seccion"><span>2</span> Información de inicio de sesión</p>
 
-        <form class="main__informacion--sesion">
+        <div class="main__informacion--sesion">
           <div class="email">
             <input
               type="email"
               class="form-control"
               id="email"
-              placeholder="Correo electrónico *"
+              placeholder="Correo electrónico"
+              required
             />
           </div>
           <div class="contrasena">
@@ -85,6 +89,7 @@
                 id="inputPassword"
                 class="contrasena-input"
                 placeholder="Contraseña"
+                required
               />
               <img
                 id="eyeIcon"
@@ -99,6 +104,7 @@
                 id="inputConfirmPassword"
                 class="contrasena-input"
                 placeholder="Confirmar contraseña"
+                required
               />
               <img
                 id="eyeIcon_2"
@@ -114,14 +120,15 @@
               type="checkbox"
               value=""
               id="check"
+              required
             />
             <label class="form-check-label" for="check">
               Acepto terminos y condiciones *
             </label>
           </div>
-          <button class="boton">Crear cuenta</button>
-        </form>
-      </div>
+          <button class="boton" type="submit">Crear cuenta</button>
+        </div>
+      </form>
       <img
         src="/public/images/huella-1 1.png"
         alt="Huella"
@@ -147,5 +154,6 @@
     <script type="module" src="/src/js/footer.js"></script>
     <script type="module" src="/src/js/header.js"></script>
     <script type="module" src="/src/js/toogle_password.js"></script>
+    <script type="module" src="/src/js/crear-cuenta.js"></script>
   </body>
 </html>
