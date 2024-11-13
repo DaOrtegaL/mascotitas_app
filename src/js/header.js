@@ -786,7 +786,7 @@ p {
                             </li>
                         </ul>
                     </div>
-                    <li class="contactos"><a href="#">Contáctanos</a></li>
+                    <li class="contactos"><a href="/contactanos">Contáctanos</a></li>
                 </ul>
             </nav>
     

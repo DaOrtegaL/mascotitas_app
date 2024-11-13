@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos</title>
+  <link rel="stylesheet" href="./src/styles/contactanos.css">
+</head>
+<body>
+    <header-mascotitas></header-mascotitas>
+    <header-login-user></header-login-user>
+  <section class="contacto">
+    <div class="contacto__contenido">
+      <h1 class="contacto__titulo">Contáctanos</h1>
+      <p class="contacto__descripcion">Nos encantaría saber de ti y ayudarte con cualquier duda o pregunta que tengas.</p>
+
+      <div class="contacto__redes-sociales">
+        <h2 class="contacto__subtitulo">Síguenos en</h2>
+        <ul class="contacto__lista-redes">
+          <li><a href="#" class="contacto__enlace">Facebook</a></li>
+          <li><a href="#" class="contacto__enlace">Instagram</a></li>
+          <li><a href="#" class="contacto__enlace">Twitter</a></li>
+          <li><a href="#" class="contacto__enlace">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="contacto__faq">
+        <h2 class="contacto__subtitulo">Preguntas Frecuentes</h2>
+        <div class="faq__item">
+          <button class="faq__pregunta">¿Cómo puedo contactarlos?</button>
+          <p class="faq__respuesta">Puedes escribirnos a través de nuestras redes sociales o enviarnos un correo a contacto@empresa.com.</p>
+        </div>
+        <div class="faq__item">
+          <button class="faq__pregunta">¿Cuáles son sus horarios de atención?</button>
+          <p class="faq__respuesta">Nuestro horario es de lunes a viernes de 9:00 a 18:00.</p>
+        </div>
+        <div class="faq__item">
+          <button class="faq__pregunta">¿Ofrecen soporte técnico?</button>
+          <p class="faq__respuesta">Sí, contamos con un equipo de soporte técnico disponible para ayudarte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer-mascotitas></footer-mascotitas>
+  <script>
+    // Verifica si el usuario está logueado comprobando la existencia de un token en localStorage
+    const isLoggedIn = localStorage.getItem('authToken') !== null;
+
+    // Carga el script correspondiente según si está logueado o no
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = isLoggedIn 
+      ? '/src/js/header-usuario-logueado.js' 
+      : '/src/js/header.js';
+    document.head.appendChild(script);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script type="module" src="/src/js/footer.js"></script>
+  <script>
+    document.querySelectorAll('.faq__pregunta').forEach(button => {
+  button.addEventListener('click', () => {
+    const respuesta = button.nextElementSibling;
+    respuesta.style.display = respuesta.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+  </script>
+
+</body>
+</html>
