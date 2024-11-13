@@ -19,7 +19,12 @@ document.getElementById('login').addEventListener('submit', function (event) {
     .then((response) => response.json())
     .then((data) => {
       console.log('Respuesta del servidor:', data);
-      //window.location.href = '/';
+
+      // Guarda el token en localStorage si existe
+      if (data.token) {
+        localStorage.setItem('authToken', data.token);
+        window.location.href = '/'; // Redirige si es necesario
+      }
     })
     .catch((error) => {
       console.error('Error:', error);
